@@ -20,16 +20,16 @@ flows.
 
 Scaling factors tested:
 
-  Factor   Meaning
-  -------- ------------------
-  1        Original flows
-  2        Double the flows
-  4        4× flows
-  8        8× flows
-  16       16× flows
-  32       32× flows
-  48       48× flows
-  64       64× flows
+| Factor | Meaning            |
+|--------|--------------------|
+| 1      | Original flows     |
+| 2      | Double the flows   |
+| 4      | 4× flows           |
+| 8      | 8× flows           |
+| 16     | 16× flows          |
+| 32     | 32× flows          |
+| 48     | 48× flows          |
+| 64     | 64× flows          |
 
 ------------------------------------------------------------------------
 
@@ -51,8 +51,9 @@ side effects of name collisions.
 
 ### Fix
 
-Each replica prefixes: - Flow label → `[rK] original_label` - Node name
-→ `[rK] original_name`
+Each replica prefixes:
+- Flow label → `[rK] original_label`
+- Node name → `[rK] original_name`
 
 This restored semantic independence.
 
@@ -76,13 +77,13 @@ For each scaling factor:
 
 ## How App Data Scales
 
-  Factor   size_app
-  -------- ----------
-  1        662
-  2        1323
-  4        2645
-  8        5289
-  16       10577
+| Factor | size_app |
+|--------|----------|
+| 1      | 662      |
+| 2      | 1323     |
+| 4      | 2645     |
+| 8      | 5289     |
+| 16     | 10577    |
 
 Observation: Application triples grow linearly with application size.
 
@@ -90,41 +91,45 @@ Observation: Application triples grow linearly with application size.
 
 ## How Inferred Graph Scales
 
-  Factor   size_inferred
-  -------- ---------------
-  1        142
-  2        284
-  4        568
-  8        1136
-  16       2272
+| Factor | size_inferred |
+|--------|---------------|
+| 1      | 142           |
+| 2      | 284           |
+| 4      | 568           |
+| 8      | 1136          |
+| 16     | 2272          |
 
-  Factor   inferred/app
-  -------- --------------
-  1        0.21
-  2        0.21
-  4        0.21
-  8        0.21
-  16       0.21
+| Factor | inferred/app |
+|--------|--------------|
+| 1      | 0.21         |
+| 2      | 0.21         |
+| 4      | 0.21         |
+| 8      | 0.21         |
+| 16     | 0.21         |
 
-Observation: - Inferred triples grow linearly. - Ratio remains
-constant. - No cross-replica explosion. - Full regeneration remains
-structurally stable.
+Observation:
+- Inferred triples grow linearly.
+- Ratio remains constant.
+- No cross-replica explosion.
+- Full regeneration remains structurally stable.
 
 ------------------------------------------------------------------------
 
 ## End-to-End Reasoning Time (Original Resource Budget)
 
-  Factor   size_app   t_reload_ms
-  -------- ---------- -------------
-  1        662        85.9
-  2        1323       94.7
-  4        2645       109.8
-  8        5289       135.2
-  16       10577      186.4
+| Factor | size_app | t_reload_ms |
+|--------|----------|-------------|
+| 1      | 662      | 85.9        |
+| 2      | 1323     | 94.7        |
+| 4      | 2645     | 109.8       |
+| 8      | 5289     | 135.2       |
+| 16     | 10577    | 186.4       |
 
-Observations: - Smooth growth. - No instability. - \< 200 ms up to \~10k
-triples. - Per-triple cost decreases with scale (fixed overhead
-amortization).
+Observations:
+- Smooth growth.
+- No instability.
+- < 200 ms up to ~10k triples.
+- Per-triple cost decreases with scale (fixed overhead amortization).
 
 ------------------------------------------------------------------------
 
@@ -138,16 +143,16 @@ conducted under constrained container configurations:
 -   2 CPU / 1 GB RAM
 -   2 CPU / 2 GB RAM
 
-Scaling extended up to factor 64 (\~6400 nodes).
+Scaling extended up to factor 64 (~6400 nodes).
 
 ## Observed Reload Times at Largest Scale (x64)
 
-  Configuration   t_reload_ms
-  --------------- -------------
-  1CPU-1GB        \~203 s
-  1CPU-2GB        \~185 s
-  2CPU-1GB        \~155 s
-  2CPU-2GB        \~139 s
+| Configuration | t_reload_ms |
+|---------------|-------------|
+| 1CPU-1GB      | ~203 s      |
+| 1CPU-2GB      | ~185 s      |
+| 2CPU-1GB      | ~155 s      |
+| 2CPU-2GB      | ~139 s      |
 
 ### Interpretation
 
