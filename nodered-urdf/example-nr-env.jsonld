@@ -1,0 +1,69 @@
+{
+  "@context": {},
+  "@id": "urn:nrua:env",
+  "@graph": [
+    {
+      "@id": "n:os",
+      "@type": [
+        "https://schema.org/OperatingSystem"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "linux"
+        }
+      ],
+      "https://schema.org/softwareVersion": [
+        {
+          "@value": "6.8.0-88-generic"
+        }
+      ],
+      "https://schema.org/description": [
+        {
+          "@value": "#89-Ubuntu SMP PREEMPT_DYNAMIC Sat Oct 11 01:02:46 UTC 2025"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isContainerised": [
+        {
+          "@value": true
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isWsl": [
+        {
+          "@value": false
+        }
+      ]
+    },
+    {
+      "@id": "n:njs",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#NodeJs"
+      ],
+      "https://schema.org/version": [
+        {
+          "@value": "v22.21.1"
+        }
+      ],
+      "https://schema.org/operatingSystem": [
+        {
+          "@id": "n:os"
+        }
+      ]
+    },
+    {
+      "@id": "n:nr",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#NodeRed"
+      ],
+      "https://schema.org/version": [
+        {
+          "@value": "4.1.3"
+        }
+      ],
+      "https://schema.org/runtimePlatform": [
+        {
+          "@id": "n:njs"
+        }
+      ]
+    }
+  ]
+}

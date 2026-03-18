@@ -1,0 +1,3308 @@
+{
+  "@context": {},
+  "@id": "urn:nrua:app",
+  "@graph": [
+    {
+      "@id": "urn:nrua:a123",
+      "@type": [
+        "https://schema.org/Application"
+      ]
+    },
+    {
+      "@id": "urn:nrua:f249d477bae20f87a",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Flow"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "249d477bae20f87a"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "Intro"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfApp": [
+        {
+          "@id": "urn:nrua:a123"
+        }
+      ],
+      "https://schema.org/keywords": [
+        {
+          "@value": "comment"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:ff6f2187d.f17ca8",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Flow"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "f6f2187d.f17ca8"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "Function without output"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfApp": [
+        {
+          "@id": "urn:nrua:a123"
+        }
+      ],
+      "https://schema.org/keywords": [
+        {
+          "@value": "comment,function,inject"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:f5887eb05077a5c03",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Flow"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "5887eb05077a5c03"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "Similar to cookbook"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfApp": [
+        {
+          "@id": "urn:nrua:a123"
+        }
+      ],
+      "https://schema.org/keywords": [
+        {
+          "@value": "change,comment,debug,inject,range"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:fa482d619f57748b0",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Flow"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "a482d619f57748b0"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "Loop"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfApp": [
+        {
+          "@id": "urn:nrua:a123"
+        }
+      ],
+      "https://schema.org/keywords": [
+        {
+          "@value": "change,comment,debug,function,inject"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:ff0acb0cb6d18867a",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Flow"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "f0acb0cb6d18867a"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "Same name"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfApp": [
+        {
+          "@id": "urn:nrua:a123"
+        }
+      ],
+      "https://schema.org/keywords": [
+        {
+          "@value": "comment,debug,inject"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:f58a8e7da0e13d73f",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Flow"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "58a8e7da0e13d73f"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "Issues and forum posts"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfApp": [
+        {
+          "@id": "urn:nrua:a123"
+        }
+      ],
+      "https://schema.org/keywords": [
+        {
+          "@value": "comment"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:n8ed1e5dbc49b9e99",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "8ed1e5dbc49b9e99"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#type": [
+        {
+          "@value": "comment"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "Example rules have been preloaded at startup. "
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfFlow": [
+        {
+          "@id": "urn:nrua:f249d477bae20f87a"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:nabe95c85adeb961c",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "abe95c85adeb961c"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#type": [
+        {
+          "@value": "comment"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "Example flows have also been preloaded at startup to make you see those rules in action."
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfFlow": [
+        {
+          "@id": "urn:nrua:f249d477bae20f87a"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:n8d3f97343e44ab1f",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "8d3f97343e44ab1f"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#type": [
+        {
+          "@value": "comment"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "Open the uRDF sidebar and navigate to the action \"Configure\" to inspect the rules."
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfFlow": [
+        {
+          "@id": "urn:nrua:f249d477bae20f87a"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:nb831c5af7d68f435",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "b831c5af7d68f435"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#type": [
+        {
+          "@value": "comment"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "Open the uRDF sidebar and navigate to the action \"Reason\" to inspect what was inferred by the example rules applied to the example flows."
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfFlow": [
+        {
+          "@id": "urn:nrua:f249d477bae20f87a"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:n1d2f3dd88b82a3df",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "1d2f3dd88b82a3df"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#type": [
+        {
+          "@value": "inject"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfFlow": [
+        {
+          "@id": "urn:nrua:ff6f2187d.f17ca8"
+        }
+      ],
+      "https://schema.org/additionalProperty": [
+        {
+          "@id": "urn_3Anrua_3An1d2f3dd88b82a3df:pv:props"
+        },
+        {
+          "@id": "urn_3Anrua_3An1d2f3dd88b82a3df:pv:repeat"
+        },
+        {
+          "@id": "urn_3Anrua_3An1d2f3dd88b82a3df:pv:crontab"
+        },
+        {
+          "@id": "urn_3Anrua_3An1d2f3dd88b82a3df:pv:once"
+        },
+        {
+          "@id": "urn_3Anrua_3An1d2f3dd88b82a3df:pv:onceDelay"
+        },
+        {
+          "@id": "urn_3Anrua_3An1d2f3dd88b82a3df:pv:topic"
+        },
+        {
+          "@id": "urn_3Anrua_3An1d2f3dd88b82a3df:pv:payload"
+        },
+        {
+          "@id": "urn_3Anrua_3An1d2f3dd88b82a3df:pv:payloadType"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#hasOutput": [
+        {
+          "@id": "urn:nrua:o1d2f3dd88b82a3df0"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1d2f3dd88b82a3df_3Av_3Aprops_3Alist_3Ali_3A0_3Aitem:obj",
+      "@type": [
+        "https://schema.org/StructuredValue"
+      ],
+      "https://schema.org/additionalProperty": [
+        {
+          "@id": "urn_3Anrua_3An1d2f3dd88b82a3df_3Av_3Aprops_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:p"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1d2f3dd88b82a3df_3Av_3Aprops_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:p",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "p"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "payload"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1d2f3dd88b82a3df_3Av_3Aprops_3Alist:li:0",
+      "@type": [
+        "https://schema.org/ListItem"
+      ],
+      "https://schema.org/position": [
+        {
+          "@value": 0
+        }
+      ],
+      "https://schema.org/item": [
+        {
+          "@id": "urn_3Anrua_3An1d2f3dd88b82a3df_3Av_3Aprops_3Alist_3Ali_3A0_3Aitem:obj"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1d2f3dd88b82a3df_3Av_3Aprops_3Alist_3Ali_3A1_3Aitem:obj",
+      "@type": [
+        "https://schema.org/StructuredValue"
+      ],
+      "https://schema.org/additionalProperty": [
+        {
+          "@id": "urn_3Anrua_3An1d2f3dd88b82a3df_3Av_3Aprops_3Alist_3Ali_3A1_3Aitem_3Aobj:pv:p"
+        },
+        {
+          "@id": "urn_3Anrua_3An1d2f3dd88b82a3df_3Av_3Aprops_3Alist_3Ali_3A1_3Aitem_3Aobj:pv:vt"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1d2f3dd88b82a3df_3Av_3Aprops_3Alist_3Ali_3A1_3Aitem_3Aobj:pv:p",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "p"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "topic"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1d2f3dd88b82a3df_3Av_3Aprops_3Alist_3Ali_3A1_3Aitem_3Aobj:pv:vt",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "vt"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "str"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1d2f3dd88b82a3df_3Av_3Aprops_3Alist:li:1",
+      "@type": [
+        "https://schema.org/ListItem"
+      ],
+      "https://schema.org/position": [
+        {
+          "@value": 1
+        }
+      ],
+      "https://schema.org/item": [
+        {
+          "@id": "urn_3Anrua_3An1d2f3dd88b82a3df_3Av_3Aprops_3Alist_3Ali_3A1_3Aitem:obj"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1d2f3dd88b82a3df_3Av_3Aprops:list",
+      "@type": [
+        "https://schema.org/ItemList"
+      ],
+      "https://schema.org/itemListElement": [
+        {
+          "@id": "urn_3Anrua_3An1d2f3dd88b82a3df_3Av_3Aprops_3Alist:li:0"
+        },
+        {
+          "@id": "urn_3Anrua_3An1d2f3dd88b82a3df_3Av_3Aprops_3Alist:li:1"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1d2f3dd88b82a3df:pv:props",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "props"
+        }
+      ],
+      "https://schema.org/valueReference": [
+        {
+          "@id": "urn_3Anrua_3An1d2f3dd88b82a3df_3Av_3Aprops:list"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1d2f3dd88b82a3df:pv:repeat",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "repeat"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1d2f3dd88b82a3df:pv:crontab",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "crontab"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1d2f3dd88b82a3df:pv:once",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "once"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": false
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1d2f3dd88b82a3df:pv:onceDelay",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "onceDelay"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": 0.1
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1d2f3dd88b82a3df:pv:topic",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "topic"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1d2f3dd88b82a3df:pv:payload",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "payload"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1d2f3dd88b82a3df:pv:payloadType",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "payloadType"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "date"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:o1d2f3dd88b82a3df0",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#NodeOutput"
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#fromGate": [
+        {
+          "@value": 0
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#toNode": [
+        {
+          "@id": "urn:nrua:nf55ddcdb94ae8b1a"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:nf55ddcdb94ae8b1a",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "f55ddcdb94ae8b1a"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#type": [
+        {
+          "@value": "function"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "function 1"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfFlow": [
+        {
+          "@id": "urn:nrua:ff6f2187d.f17ca8"
+        }
+      ],
+      "https://schema.org/additionalProperty": [
+        {
+          "@id": "urn_3Anrua_3Anf55ddcdb94ae8b1a:pv:func"
+        },
+        {
+          "@id": "urn_3Anrua_3Anf55ddcdb94ae8b1a:pv:outputs"
+        },
+        {
+          "@id": "urn_3Anrua_3Anf55ddcdb94ae8b1a:pv:timeout"
+        },
+        {
+          "@id": "urn_3Anrua_3Anf55ddcdb94ae8b1a:pv:noerr"
+        },
+        {
+          "@id": "urn_3Anrua_3Anf55ddcdb94ae8b1a:pv:initialize"
+        },
+        {
+          "@id": "urn_3Anrua_3Anf55ddcdb94ae8b1a:pv:finalize"
+        },
+        {
+          "@id": "urn_3Anrua_3Anf55ddcdb94ae8b1a:pv:libs"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anf55ddcdb94ae8b1a:pv:func",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "func"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "\nreturn msg;"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anf55ddcdb94ae8b1a:pv:outputs",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "outputs"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": 1
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anf55ddcdb94ae8b1a:pv:timeout",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "timeout"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": 0
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anf55ddcdb94ae8b1a:pv:noerr",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "noerr"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": 0
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anf55ddcdb94ae8b1a:pv:initialize",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "initialize"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anf55ddcdb94ae8b1a:pv:finalize",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "finalize"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anf55ddcdb94ae8b1a_3Av_3Alibs:list",
+      "@type": [
+        "https://schema.org/ItemList"
+      ],
+      "https://schema.org/itemListElement": []
+    },
+    {
+      "@id": "urn_3Anrua_3Anf55ddcdb94ae8b1a:pv:libs",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "libs"
+        }
+      ],
+      "https://schema.org/valueReference": [
+        {
+          "@id": "urn_3Anrua_3Anf55ddcdb94ae8b1a_3Av_3Alibs:list"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:n1b7f5a60849144a1",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "1b7f5a60849144a1"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#type": [
+        {
+          "@value": "comment"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "The function node in this flow will be flagged because it has no output."
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfFlow": [
+        {
+          "@id": "urn:nrua:ff6f2187d.f17ca8"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:nb3950769531511d2",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "b3950769531511d2"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#type": [
+        {
+          "@value": "inject"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfFlow": [
+        {
+          "@id": "urn:nrua:f5887eb05077a5c03"
+        }
+      ],
+      "https://schema.org/additionalProperty": [
+        {
+          "@id": "urn_3Anrua_3Anb3950769531511d2:pv:props"
+        },
+        {
+          "@id": "urn_3Anrua_3Anb3950769531511d2:pv:repeat"
+        },
+        {
+          "@id": "urn_3Anrua_3Anb3950769531511d2:pv:crontab"
+        },
+        {
+          "@id": "urn_3Anrua_3Anb3950769531511d2:pv:once"
+        },
+        {
+          "@id": "urn_3Anrua_3Anb3950769531511d2:pv:onceDelay"
+        },
+        {
+          "@id": "urn_3Anrua_3Anb3950769531511d2:pv:topic"
+        },
+        {
+          "@id": "urn_3Anrua_3Anb3950769531511d2:pv:payload"
+        },
+        {
+          "@id": "urn_3Anrua_3Anb3950769531511d2:pv:payloadType"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#hasOutput": [
+        {
+          "@id": "urn:nrua:ob3950769531511d20"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anb3950769531511d2_3Av_3Aprops_3Alist_3Ali_3A0_3Aitem:obj",
+      "@type": [
+        "https://schema.org/StructuredValue"
+      ],
+      "https://schema.org/additionalProperty": [
+        {
+          "@id": "urn_3Anrua_3Anb3950769531511d2_3Av_3Aprops_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:p"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anb3950769531511d2_3Av_3Aprops_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:p",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "p"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "payload"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anb3950769531511d2_3Av_3Aprops_3Alist:li:0",
+      "@type": [
+        "https://schema.org/ListItem"
+      ],
+      "https://schema.org/position": [
+        {
+          "@value": 0
+        }
+      ],
+      "https://schema.org/item": [
+        {
+          "@id": "urn_3Anrua_3Anb3950769531511d2_3Av_3Aprops_3Alist_3Ali_3A0_3Aitem:obj"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anb3950769531511d2_3Av_3Aprops_3Alist_3Ali_3A1_3Aitem:obj",
+      "@type": [
+        "https://schema.org/StructuredValue"
+      ],
+      "https://schema.org/additionalProperty": [
+        {
+          "@id": "urn_3Anrua_3Anb3950769531511d2_3Av_3Aprops_3Alist_3Ali_3A1_3Aitem_3Aobj:pv:p"
+        },
+        {
+          "@id": "urn_3Anrua_3Anb3950769531511d2_3Av_3Aprops_3Alist_3Ali_3A1_3Aitem_3Aobj:pv:vt"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anb3950769531511d2_3Av_3Aprops_3Alist_3Ali_3A1_3Aitem_3Aobj:pv:p",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "p"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "topic"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anb3950769531511d2_3Av_3Aprops_3Alist_3Ali_3A1_3Aitem_3Aobj:pv:vt",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "vt"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "str"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anb3950769531511d2_3Av_3Aprops_3Alist:li:1",
+      "@type": [
+        "https://schema.org/ListItem"
+      ],
+      "https://schema.org/position": [
+        {
+          "@value": 1
+        }
+      ],
+      "https://schema.org/item": [
+        {
+          "@id": "urn_3Anrua_3Anb3950769531511d2_3Av_3Aprops_3Alist_3Ali_3A1_3Aitem:obj"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anb3950769531511d2_3Av_3Aprops:list",
+      "@type": [
+        "https://schema.org/ItemList"
+      ],
+      "https://schema.org/itemListElement": [
+        {
+          "@id": "urn_3Anrua_3Anb3950769531511d2_3Av_3Aprops_3Alist:li:0"
+        },
+        {
+          "@id": "urn_3Anrua_3Anb3950769531511d2_3Av_3Aprops_3Alist:li:1"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anb3950769531511d2:pv:props",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "props"
+        }
+      ],
+      "https://schema.org/valueReference": [
+        {
+          "@id": "urn_3Anrua_3Anb3950769531511d2_3Av_3Aprops:list"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anb3950769531511d2:pv:repeat",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "repeat"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anb3950769531511d2:pv:crontab",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "crontab"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anb3950769531511d2:pv:once",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "once"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": false
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anb3950769531511d2:pv:onceDelay",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "onceDelay"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": 0.1
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anb3950769531511d2:pv:topic",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "topic"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anb3950769531511d2:pv:payload",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "payload"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anb3950769531511d2:pv:payloadType",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "payloadType"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "date"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:ob3950769531511d20",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#NodeOutput"
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#fromGate": [
+        {
+          "@value": 0
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#toNode": [
+        {
+          "@id": "urn:nrua:n9db0c193025da52b"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:n9db0c193025da52b",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "9db0c193025da52b"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#type": [
+        {
+          "@value": "change"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfFlow": [
+        {
+          "@id": "urn:nrua:f5887eb05077a5c03"
+        }
+      ],
+      "https://schema.org/additionalProperty": [
+        {
+          "@id": "urn_3Anrua_3An9db0c193025da52b:pv:rules"
+        },
+        {
+          "@id": "urn_3Anrua_3An9db0c193025da52b:pv:action"
+        },
+        {
+          "@id": "urn_3Anrua_3An9db0c193025da52b:pv:property"
+        },
+        {
+          "@id": "urn_3Anrua_3An9db0c193025da52b:pv:from"
+        },
+        {
+          "@id": "urn_3Anrua_3An9db0c193025da52b:pv:to"
+        },
+        {
+          "@id": "urn_3Anrua_3An9db0c193025da52b:pv:reg"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#hasOutput": [
+        {
+          "@id": "urn:nrua:o9db0c193025da52b0"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An9db0c193025da52b_3Av_3Arules_3Alist_3Ali_3A0_3Aitem:obj",
+      "@type": [
+        "https://schema.org/StructuredValue"
+      ],
+      "https://schema.org/additionalProperty": [
+        {
+          "@id": "urn_3Anrua_3An9db0c193025da52b_3Av_3Arules_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:p"
+        },
+        {
+          "@id": "urn_3Anrua_3An9db0c193025da52b_3Av_3Arules_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:pt"
+        },
+        {
+          "@id": "urn_3Anrua_3An9db0c193025da52b_3Av_3Arules_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:t"
+        },
+        {
+          "@id": "urn_3Anrua_3An9db0c193025da52b_3Av_3Arules_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:to"
+        },
+        {
+          "@id": "urn_3Anrua_3An9db0c193025da52b_3Av_3Arules_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:tot"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An9db0c193025da52b_3Av_3Arules_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:p",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "p"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "payload"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An9db0c193025da52b_3Av_3Arules_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:pt",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "pt"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "msg"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An9db0c193025da52b_3Av_3Arules_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:t",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "t"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "set"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An9db0c193025da52b_3Av_3Arules_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:to",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "to"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An9db0c193025da52b_3Av_3Arules_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:tot",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "tot"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "str"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An9db0c193025da52b_3Av_3Arules_3Alist:li:0",
+      "@type": [
+        "https://schema.org/ListItem"
+      ],
+      "https://schema.org/position": [
+        {
+          "@value": 0
+        }
+      ],
+      "https://schema.org/item": [
+        {
+          "@id": "urn_3Anrua_3An9db0c193025da52b_3Av_3Arules_3Alist_3Ali_3A0_3Aitem:obj"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An9db0c193025da52b_3Av_3Arules:list",
+      "@type": [
+        "https://schema.org/ItemList"
+      ],
+      "https://schema.org/itemListElement": [
+        {
+          "@id": "urn_3Anrua_3An9db0c193025da52b_3Av_3Arules_3Alist:li:0"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An9db0c193025da52b:pv:rules",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "rules"
+        }
+      ],
+      "https://schema.org/valueReference": [
+        {
+          "@id": "urn_3Anrua_3An9db0c193025da52b_3Av_3Arules:list"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An9db0c193025da52b:pv:action",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "action"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An9db0c193025da52b:pv:property",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "property"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An9db0c193025da52b:pv:from",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "from"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An9db0c193025da52b:pv:to",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "to"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An9db0c193025da52b:pv:reg",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "reg"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": false
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:o9db0c193025da52b0",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#NodeOutput"
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#fromGate": [
+        {
+          "@value": 0
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#toNode": [
+        {
+          "@id": "urn:nrua:ndcec0e49be728db3"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:ndcec0e49be728db3",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "dcec0e49be728db3"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#type": [
+        {
+          "@value": "range"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfFlow": [
+        {
+          "@id": "urn:nrua:f5887eb05077a5c03"
+        }
+      ],
+      "https://schema.org/additionalProperty": [
+        {
+          "@id": "urn_3Anrua_3Andcec0e49be728db3:pv:minin"
+        },
+        {
+          "@id": "urn_3Anrua_3Andcec0e49be728db3:pv:maxin"
+        },
+        {
+          "@id": "urn_3Anrua_3Andcec0e49be728db3:pv:minout"
+        },
+        {
+          "@id": "urn_3Anrua_3Andcec0e49be728db3:pv:maxout"
+        },
+        {
+          "@id": "urn_3Anrua_3Andcec0e49be728db3:pv:action"
+        },
+        {
+          "@id": "urn_3Anrua_3Andcec0e49be728db3:pv:round"
+        },
+        {
+          "@id": "urn_3Anrua_3Andcec0e49be728db3:pv:property"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#hasOutput": [
+        {
+          "@id": "urn:nrua:odcec0e49be728db30"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Andcec0e49be728db3:pv:minin",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "minin"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Andcec0e49be728db3:pv:maxin",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "maxin"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Andcec0e49be728db3:pv:minout",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "minout"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Andcec0e49be728db3:pv:maxout",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "maxout"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Andcec0e49be728db3:pv:action",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "action"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "scale"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Andcec0e49be728db3:pv:round",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "round"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": false
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Andcec0e49be728db3:pv:property",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "property"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "payload"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:odcec0e49be728db30",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#NodeOutput"
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#fromGate": [
+        {
+          "@value": 0
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#toNode": [
+        {
+          "@id": "urn:nrua:n89c017931b79c3c9"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:n89c017931b79c3c9",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "89c017931b79c3c9"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#type": [
+        {
+          "@value": "debug"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "debug 1"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfFlow": [
+        {
+          "@id": "urn:nrua:f5887eb05077a5c03"
+        }
+      ],
+      "https://schema.org/additionalProperty": [
+        {
+          "@id": "urn_3Anrua_3An89c017931b79c3c9:pv:active"
+        },
+        {
+          "@id": "urn_3Anrua_3An89c017931b79c3c9:pv:tosidebar"
+        },
+        {
+          "@id": "urn_3Anrua_3An89c017931b79c3c9:pv:console"
+        },
+        {
+          "@id": "urn_3Anrua_3An89c017931b79c3c9:pv:tostatus"
+        },
+        {
+          "@id": "urn_3Anrua_3An89c017931b79c3c9:pv:complete"
+        },
+        {
+          "@id": "urn_3Anrua_3An89c017931b79c3c9:pv:statusVal"
+        },
+        {
+          "@id": "urn_3Anrua_3An89c017931b79c3c9:pv:statusType"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An89c017931b79c3c9:pv:active",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "active"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": true
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An89c017931b79c3c9:pv:tosidebar",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "tosidebar"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": true
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An89c017931b79c3c9:pv:console",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "console"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": false
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An89c017931b79c3c9:pv:tostatus",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "tostatus"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": false
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An89c017931b79c3c9:pv:complete",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "complete"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "false"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An89c017931b79c3c9:pv:statusVal",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "statusVal"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An89c017931b79c3c9:pv:statusType",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "statusType"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "auto"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:n8d46e9992422bb1e",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "8d46e9992422bb1e"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#type": [
+        {
+          "@value": "comment"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "Import example library flows using the tool flows-json-to-jsonld. This flow will be linked to one of such example flows because it uses the same types of nodes."
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfFlow": [
+        {
+          "@id": "urn:nrua:f5887eb05077a5c03"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:nf62732dfdb6456e9",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "f62732dfdb6456e9"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#type": [
+        {
+          "@value": "inject"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfFlow": [
+        {
+          "@id": "urn:nrua:fa482d619f57748b0"
+        }
+      ],
+      "https://schema.org/additionalProperty": [
+        {
+          "@id": "urn_3Anrua_3Anf62732dfdb6456e9:pv:props"
+        },
+        {
+          "@id": "urn_3Anrua_3Anf62732dfdb6456e9:pv:repeat"
+        },
+        {
+          "@id": "urn_3Anrua_3Anf62732dfdb6456e9:pv:crontab"
+        },
+        {
+          "@id": "urn_3Anrua_3Anf62732dfdb6456e9:pv:once"
+        },
+        {
+          "@id": "urn_3Anrua_3Anf62732dfdb6456e9:pv:onceDelay"
+        },
+        {
+          "@id": "urn_3Anrua_3Anf62732dfdb6456e9:pv:topic"
+        },
+        {
+          "@id": "urn_3Anrua_3Anf62732dfdb6456e9:pv:payload"
+        },
+        {
+          "@id": "urn_3Anrua_3Anf62732dfdb6456e9:pv:payloadType"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#hasOutput": [
+        {
+          "@id": "urn:nrua:of62732dfdb6456e90"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anf62732dfdb6456e9_3Av_3Aprops_3Alist_3Ali_3A0_3Aitem:obj",
+      "@type": [
+        "https://schema.org/StructuredValue"
+      ],
+      "https://schema.org/additionalProperty": [
+        {
+          "@id": "urn_3Anrua_3Anf62732dfdb6456e9_3Av_3Aprops_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:p"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anf62732dfdb6456e9_3Av_3Aprops_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:p",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "p"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "payload"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anf62732dfdb6456e9_3Av_3Aprops_3Alist:li:0",
+      "@type": [
+        "https://schema.org/ListItem"
+      ],
+      "https://schema.org/position": [
+        {
+          "@value": 0
+        }
+      ],
+      "https://schema.org/item": [
+        {
+          "@id": "urn_3Anrua_3Anf62732dfdb6456e9_3Av_3Aprops_3Alist_3Ali_3A0_3Aitem:obj"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anf62732dfdb6456e9_3Av_3Aprops_3Alist_3Ali_3A1_3Aitem:obj",
+      "@type": [
+        "https://schema.org/StructuredValue"
+      ],
+      "https://schema.org/additionalProperty": [
+        {
+          "@id": "urn_3Anrua_3Anf62732dfdb6456e9_3Av_3Aprops_3Alist_3Ali_3A1_3Aitem_3Aobj:pv:p"
+        },
+        {
+          "@id": "urn_3Anrua_3Anf62732dfdb6456e9_3Av_3Aprops_3Alist_3Ali_3A1_3Aitem_3Aobj:pv:vt"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anf62732dfdb6456e9_3Av_3Aprops_3Alist_3Ali_3A1_3Aitem_3Aobj:pv:p",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "p"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "topic"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anf62732dfdb6456e9_3Av_3Aprops_3Alist_3Ali_3A1_3Aitem_3Aobj:pv:vt",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "vt"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "str"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anf62732dfdb6456e9_3Av_3Aprops_3Alist:li:1",
+      "@type": [
+        "https://schema.org/ListItem"
+      ],
+      "https://schema.org/position": [
+        {
+          "@value": 1
+        }
+      ],
+      "https://schema.org/item": [
+        {
+          "@id": "urn_3Anrua_3Anf62732dfdb6456e9_3Av_3Aprops_3Alist_3Ali_3A1_3Aitem:obj"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anf62732dfdb6456e9_3Av_3Aprops:list",
+      "@type": [
+        "https://schema.org/ItemList"
+      ],
+      "https://schema.org/itemListElement": [
+        {
+          "@id": "urn_3Anrua_3Anf62732dfdb6456e9_3Av_3Aprops_3Alist:li:0"
+        },
+        {
+          "@id": "urn_3Anrua_3Anf62732dfdb6456e9_3Av_3Aprops_3Alist:li:1"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anf62732dfdb6456e9:pv:props",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "props"
+        }
+      ],
+      "https://schema.org/valueReference": [
+        {
+          "@id": "urn_3Anrua_3Anf62732dfdb6456e9_3Av_3Aprops:list"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anf62732dfdb6456e9:pv:repeat",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "repeat"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anf62732dfdb6456e9:pv:crontab",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "crontab"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anf62732dfdb6456e9:pv:once",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "once"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": false
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anf62732dfdb6456e9:pv:onceDelay",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "onceDelay"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": 0.1
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anf62732dfdb6456e9:pv:topic",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "topic"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anf62732dfdb6456e9:pv:payload",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "payload"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anf62732dfdb6456e9:pv:payloadType",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "payloadType"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "date"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:of62732dfdb6456e90",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#NodeOutput"
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#fromGate": [
+        {
+          "@value": 0
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#toNode": [
+        {
+          "@id": "urn:nrua:nb5053a2d10604b9f"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:nb5053a2d10604b9f",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "b5053a2d10604b9f"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#type": [
+        {
+          "@value": "function"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "function 2"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfFlow": [
+        {
+          "@id": "urn:nrua:fa482d619f57748b0"
+        }
+      ],
+      "https://schema.org/additionalProperty": [
+        {
+          "@id": "urn_3Anrua_3Anb5053a2d10604b9f:pv:func"
+        },
+        {
+          "@id": "urn_3Anrua_3Anb5053a2d10604b9f:pv:outputs"
+        },
+        {
+          "@id": "urn_3Anrua_3Anb5053a2d10604b9f:pv:timeout"
+        },
+        {
+          "@id": "urn_3Anrua_3Anb5053a2d10604b9f:pv:noerr"
+        },
+        {
+          "@id": "urn_3Anrua_3Anb5053a2d10604b9f:pv:initialize"
+        },
+        {
+          "@id": "urn_3Anrua_3Anb5053a2d10604b9f:pv:finalize"
+        },
+        {
+          "@id": "urn_3Anrua_3Anb5053a2d10604b9f:pv:libs"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#hasOutput": [
+        {
+          "@id": "urn:nrua:ob5053a2d10604b9f0"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anb5053a2d10604b9f:pv:func",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "func"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "\nreturn msg;"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anb5053a2d10604b9f:pv:outputs",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "outputs"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": 1
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anb5053a2d10604b9f:pv:timeout",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "timeout"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": 0
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anb5053a2d10604b9f:pv:noerr",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "noerr"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": 0
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anb5053a2d10604b9f:pv:initialize",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "initialize"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anb5053a2d10604b9f:pv:finalize",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "finalize"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3Anb5053a2d10604b9f_3Av_3Alibs:list",
+      "@type": [
+        "https://schema.org/ItemList"
+      ],
+      "https://schema.org/itemListElement": []
+    },
+    {
+      "@id": "urn_3Anrua_3Anb5053a2d10604b9f:pv:libs",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "libs"
+        }
+      ],
+      "https://schema.org/valueReference": [
+        {
+          "@id": "urn_3Anrua_3Anb5053a2d10604b9f_3Av_3Alibs:list"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:ob5053a2d10604b9f0",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#NodeOutput"
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#fromGate": [
+        {
+          "@value": 0
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#toNode": [
+        {
+          "@id": "urn:nrua:n1e106aca59b53bab"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:n1e106aca59b53bab",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "1e106aca59b53bab"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#type": [
+        {
+          "@value": "change"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfFlow": [
+        {
+          "@id": "urn:nrua:fa482d619f57748b0"
+        }
+      ],
+      "https://schema.org/additionalProperty": [
+        {
+          "@id": "urn_3Anrua_3An1e106aca59b53bab:pv:rules"
+        },
+        {
+          "@id": "urn_3Anrua_3An1e106aca59b53bab:pv:action"
+        },
+        {
+          "@id": "urn_3Anrua_3An1e106aca59b53bab:pv:property"
+        },
+        {
+          "@id": "urn_3Anrua_3An1e106aca59b53bab:pv:from"
+        },
+        {
+          "@id": "urn_3Anrua_3An1e106aca59b53bab:pv:to"
+        },
+        {
+          "@id": "urn_3Anrua_3An1e106aca59b53bab:pv:reg"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#hasOutput": [
+        {
+          "@id": "urn:nrua:o1e106aca59b53bab0"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1e106aca59b53bab_3Av_3Arules_3Alist_3Ali_3A0_3Aitem:obj",
+      "@type": [
+        "https://schema.org/StructuredValue"
+      ],
+      "https://schema.org/additionalProperty": [
+        {
+          "@id": "urn_3Anrua_3An1e106aca59b53bab_3Av_3Arules_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:p"
+        },
+        {
+          "@id": "urn_3Anrua_3An1e106aca59b53bab_3Av_3Arules_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:pt"
+        },
+        {
+          "@id": "urn_3Anrua_3An1e106aca59b53bab_3Av_3Arules_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:t"
+        },
+        {
+          "@id": "urn_3Anrua_3An1e106aca59b53bab_3Av_3Arules_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:to"
+        },
+        {
+          "@id": "urn_3Anrua_3An1e106aca59b53bab_3Av_3Arules_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:tot"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1e106aca59b53bab_3Av_3Arules_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:p",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "p"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "payload"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1e106aca59b53bab_3Av_3Arules_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:pt",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "pt"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "msg"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1e106aca59b53bab_3Av_3Arules_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:t",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "t"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "set"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1e106aca59b53bab_3Av_3Arules_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:to",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "to"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1e106aca59b53bab_3Av_3Arules_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:tot",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "tot"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "str"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1e106aca59b53bab_3Av_3Arules_3Alist:li:0",
+      "@type": [
+        "https://schema.org/ListItem"
+      ],
+      "https://schema.org/position": [
+        {
+          "@value": 0
+        }
+      ],
+      "https://schema.org/item": [
+        {
+          "@id": "urn_3Anrua_3An1e106aca59b53bab_3Av_3Arules_3Alist_3Ali_3A0_3Aitem:obj"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1e106aca59b53bab_3Av_3Arules:list",
+      "@type": [
+        "https://schema.org/ItemList"
+      ],
+      "https://schema.org/itemListElement": [
+        {
+          "@id": "urn_3Anrua_3An1e106aca59b53bab_3Av_3Arules_3Alist:li:0"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1e106aca59b53bab:pv:rules",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "rules"
+        }
+      ],
+      "https://schema.org/valueReference": [
+        {
+          "@id": "urn_3Anrua_3An1e106aca59b53bab_3Av_3Arules:list"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1e106aca59b53bab:pv:action",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "action"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1e106aca59b53bab:pv:property",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "property"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1e106aca59b53bab:pv:from",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "from"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1e106aca59b53bab:pv:to",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "to"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An1e106aca59b53bab:pv:reg",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "reg"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": false
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:o1e106aca59b53bab0",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#NodeOutput"
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#fromGate": [
+        {
+          "@value": 0
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#toNode": [
+        {
+          "@id": "urn:nrua:nb5053a2d10604b9f"
+        },
+        {
+          "@id": "urn:nrua:n023b526ff4cdef8c"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:n023b526ff4cdef8c",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "023b526ff4cdef8c"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#type": [
+        {
+          "@value": "debug"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "debug 2"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfFlow": [
+        {
+          "@id": "urn:nrua:fa482d619f57748b0"
+        }
+      ],
+      "https://schema.org/additionalProperty": [
+        {
+          "@id": "urn_3Anrua_3An023b526ff4cdef8c:pv:active"
+        },
+        {
+          "@id": "urn_3Anrua_3An023b526ff4cdef8c:pv:tosidebar"
+        },
+        {
+          "@id": "urn_3Anrua_3An023b526ff4cdef8c:pv:console"
+        },
+        {
+          "@id": "urn_3Anrua_3An023b526ff4cdef8c:pv:tostatus"
+        },
+        {
+          "@id": "urn_3Anrua_3An023b526ff4cdef8c:pv:complete"
+        },
+        {
+          "@id": "urn_3Anrua_3An023b526ff4cdef8c:pv:statusVal"
+        },
+        {
+          "@id": "urn_3Anrua_3An023b526ff4cdef8c:pv:statusType"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An023b526ff4cdef8c:pv:active",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "active"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": true
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An023b526ff4cdef8c:pv:tosidebar",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "tosidebar"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": true
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An023b526ff4cdef8c:pv:console",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "console"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": false
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An023b526ff4cdef8c:pv:tostatus",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "tostatus"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": false
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An023b526ff4cdef8c:pv:complete",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "complete"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "false"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An023b526ff4cdef8c:pv:statusVal",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "statusVal"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An023b526ff4cdef8c:pv:statusType",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "statusType"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "auto"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:neb7b53e827075b68",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "eb7b53e827075b68"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#type": [
+        {
+          "@value": "comment"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "The function and change nodes in this flow will be flagged because they form a loop."
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfFlow": [
+        {
+          "@id": "urn:nrua:fa482d619f57748b0"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:nd43534c34a4a54ce",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "d43534c34a4a54ce"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#type": [
+        {
+          "@value": "inject"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "Hello"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfFlow": [
+        {
+          "@id": "urn:nrua:ff0acb0cb6d18867a"
+        }
+      ],
+      "https://schema.org/additionalProperty": [
+        {
+          "@id": "urn_3Anrua_3And43534c34a4a54ce:pv:props"
+        },
+        {
+          "@id": "urn_3Anrua_3And43534c34a4a54ce:pv:repeat"
+        },
+        {
+          "@id": "urn_3Anrua_3And43534c34a4a54ce:pv:crontab"
+        },
+        {
+          "@id": "urn_3Anrua_3And43534c34a4a54ce:pv:once"
+        },
+        {
+          "@id": "urn_3Anrua_3And43534c34a4a54ce:pv:onceDelay"
+        },
+        {
+          "@id": "urn_3Anrua_3And43534c34a4a54ce:pv:topic"
+        },
+        {
+          "@id": "urn_3Anrua_3And43534c34a4a54ce:pv:payload"
+        },
+        {
+          "@id": "urn_3Anrua_3And43534c34a4a54ce:pv:payloadType"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#hasOutput": [
+        {
+          "@id": "urn:nrua:od43534c34a4a54ce0"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3And43534c34a4a54ce_3Av_3Aprops_3Alist_3Ali_3A0_3Aitem:obj",
+      "@type": [
+        "https://schema.org/StructuredValue"
+      ],
+      "https://schema.org/additionalProperty": [
+        {
+          "@id": "urn_3Anrua_3And43534c34a4a54ce_3Av_3Aprops_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:p"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3And43534c34a4a54ce_3Av_3Aprops_3Alist_3Ali_3A0_3Aitem_3Aobj:pv:p",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "p"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "payload"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3And43534c34a4a54ce_3Av_3Aprops_3Alist:li:0",
+      "@type": [
+        "https://schema.org/ListItem"
+      ],
+      "https://schema.org/position": [
+        {
+          "@value": 0
+        }
+      ],
+      "https://schema.org/item": [
+        {
+          "@id": "urn_3Anrua_3And43534c34a4a54ce_3Av_3Aprops_3Alist_3Ali_3A0_3Aitem:obj"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3And43534c34a4a54ce_3Av_3Aprops_3Alist_3Ali_3A1_3Aitem:obj",
+      "@type": [
+        "https://schema.org/StructuredValue"
+      ],
+      "https://schema.org/additionalProperty": [
+        {
+          "@id": "urn_3Anrua_3And43534c34a4a54ce_3Av_3Aprops_3Alist_3Ali_3A1_3Aitem_3Aobj:pv:p"
+        },
+        {
+          "@id": "urn_3Anrua_3And43534c34a4a54ce_3Av_3Aprops_3Alist_3Ali_3A1_3Aitem_3Aobj:pv:vt"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3And43534c34a4a54ce_3Av_3Aprops_3Alist_3Ali_3A1_3Aitem_3Aobj:pv:p",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "p"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "topic"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3And43534c34a4a54ce_3Av_3Aprops_3Alist_3Ali_3A1_3Aitem_3Aobj:pv:vt",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "vt"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "str"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3And43534c34a4a54ce_3Av_3Aprops_3Alist:li:1",
+      "@type": [
+        "https://schema.org/ListItem"
+      ],
+      "https://schema.org/position": [
+        {
+          "@value": 1
+        }
+      ],
+      "https://schema.org/item": [
+        {
+          "@id": "urn_3Anrua_3And43534c34a4a54ce_3Av_3Aprops_3Alist_3Ali_3A1_3Aitem:obj"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3And43534c34a4a54ce_3Av_3Aprops:list",
+      "@type": [
+        "https://schema.org/ItemList"
+      ],
+      "https://schema.org/itemListElement": [
+        {
+          "@id": "urn_3Anrua_3And43534c34a4a54ce_3Av_3Aprops_3Alist:li:0"
+        },
+        {
+          "@id": "urn_3Anrua_3And43534c34a4a54ce_3Av_3Aprops_3Alist:li:1"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3And43534c34a4a54ce:pv:props",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "props"
+        }
+      ],
+      "https://schema.org/valueReference": [
+        {
+          "@id": "urn_3Anrua_3And43534c34a4a54ce_3Av_3Aprops:list"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3And43534c34a4a54ce:pv:repeat",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "repeat"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3And43534c34a4a54ce:pv:crontab",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "crontab"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3And43534c34a4a54ce:pv:once",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "once"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": false
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3And43534c34a4a54ce:pv:onceDelay",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "onceDelay"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": 0.1
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3And43534c34a4a54ce:pv:topic",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "topic"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3And43534c34a4a54ce:pv:payload",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "payload"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3And43534c34a4a54ce:pv:payloadType",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "payloadType"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "date"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:od43534c34a4a54ce0",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#NodeOutput"
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#fromGate": [
+        {
+          "@value": 0
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#toNode": [
+        {
+          "@id": "urn:nrua:n773192bab4698d7c"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:n773192bab4698d7c",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "773192bab4698d7c"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#type": [
+        {
+          "@value": "debug"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "Hello"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfFlow": [
+        {
+          "@id": "urn:nrua:ff0acb0cb6d18867a"
+        }
+      ],
+      "https://schema.org/additionalProperty": [
+        {
+          "@id": "urn_3Anrua_3An773192bab4698d7c:pv:active"
+        },
+        {
+          "@id": "urn_3Anrua_3An773192bab4698d7c:pv:tosidebar"
+        },
+        {
+          "@id": "urn_3Anrua_3An773192bab4698d7c:pv:console"
+        },
+        {
+          "@id": "urn_3Anrua_3An773192bab4698d7c:pv:tostatus"
+        },
+        {
+          "@id": "urn_3Anrua_3An773192bab4698d7c:pv:complete"
+        },
+        {
+          "@id": "urn_3Anrua_3An773192bab4698d7c:pv:targetType"
+        },
+        {
+          "@id": "urn_3Anrua_3An773192bab4698d7c:pv:statusVal"
+        },
+        {
+          "@id": "urn_3Anrua_3An773192bab4698d7c:pv:statusType"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An773192bab4698d7c:pv:active",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "active"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": true
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An773192bab4698d7c:pv:tosidebar",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "tosidebar"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": true
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An773192bab4698d7c:pv:console",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "console"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": false
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An773192bab4698d7c:pv:tostatus",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "tostatus"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": false
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An773192bab4698d7c:pv:complete",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "complete"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "payload"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An773192bab4698d7c:pv:targetType",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "targetType"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "msg"
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An773192bab4698d7c:pv:statusVal",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "statusVal"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": ""
+        }
+      ]
+    },
+    {
+      "@id": "urn_3Anrua_3An773192bab4698d7c:pv:statusType",
+      "@type": [
+        "https://schema.org/PropertyValue"
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "statusType"
+        }
+      ],
+      "https://schema.org/value": [
+        {
+          "@value": "auto"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:n445f43a4b9bd206c",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "445f43a4b9bd206c"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#type": [
+        {
+          "@value": "comment"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "The nodes in this flow will be flqgged because they have the same name."
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfFlow": [
+        {
+          "@id": "urn:nrua:ff0acb0cb6d18867a"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:n7b7af83db6639bcd",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "7b7af83db6639bcd"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#type": [
+        {
+          "@value": "comment"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "Load the example Node-RED GitHub issues and Node-RED forum posts using the tools github-issues-to-jsonld and discourse-forum-to-jsonld. "
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfFlow": [
+        {
+          "@id": "urn:nrua:f58a8e7da0e13d73f"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:n6656a2b23cb6c5e2",
+      "@type": [
+        "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node"
+      ],
+      "https://schema.org/identifier": [
+        {
+          "@value": "6656a2b23cb6c5e2"
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#type": [
+        {
+          "@value": "comment"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@value": "Nodes will be linked to issues and forum posts based on node type and issue/post title."
+        }
+      ],
+      "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfFlow": [
+        {
+          "@id": "urn:nrua:f58a8e7da0e13d73f"
+        }
+      ]
+    }
+  ]
+}

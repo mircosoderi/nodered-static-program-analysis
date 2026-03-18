@@ -1,0 +1,507 @@
+{
+  "@context": {},
+  "@id": "urn:graph:inferred",
+  "@graph": [
+    {
+      "@id": "urn:nrua:n1d2f3dd88b82a3df",
+      "https://schema.org/seeAlso": [
+        {
+          "@id": "https://github.com/node-red/node-red/pull/5334"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/5063"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4902"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4806"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4670"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/pull/2336"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/1839"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/351"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/188"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:nf55ddcdb94ae8b1a",
+      "https://schema.org/seeAlso": [
+        {
+          "@id": "https://github.com/node-red/node-red/issues/5436"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/5384"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/5344"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/5005"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/pull/5003"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/pull/4770"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/pull/4757"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4723"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4541"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4494"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4106"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/pull/3984"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/3937"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/3490"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/pull/2529"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/2040"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/1702"
+        },
+        {
+          "@id": "https://discourse.nodered.org/t/function-nodes-how-to-reuse-js-functions-in-my-functions/100202"
+        }
+      ],
+      "https://schema.org/comment": [
+        {
+          "@value": "There may be a link missing in output from this function node."
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:nb3950769531511d2",
+      "https://schema.org/seeAlso": [
+        {
+          "@id": "https://github.com/node-red/node-red/pull/5334"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/5063"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4902"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4806"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4670"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/pull/2336"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/1839"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/351"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/188"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:n9db0c193025da52b",
+      "https://schema.org/seeAlso": [
+        {
+          "@id": "https://github.com/node-red/node-red/issues/5347"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/5116"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/5063"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4110"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4044"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/3940"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/3757"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/2700"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/2695"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/pull/1655"
+        },
+        {
+          "@id": "https://discourse.nodered.org/t/using-home-assistants-input-number-in-a-change-node-to-send-data-to-hourglass-node/100227"
+        },
+        {
+          "@id": "https://discourse.nodered.org/t/dashboard-2-0-ui-chart-prevent-line-color-changes-for-certain-data/100214"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:ndcec0e49be728db3",
+      "https://schema.org/seeAlso": [
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4463"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:n89c017931b79c3c9",
+      "https://schema.org/seeAlso": [
+        {
+          "@id": "https://github.com/node-red/node-red/issues/5124"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/5048"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4902"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4542"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/3936"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/3436"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/3425"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/pull/3402"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/pull/3396"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/2643"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/1164"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/978"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/81"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:nf62732dfdb6456e9",
+      "https://schema.org/seeAlso": [
+        {
+          "@id": "https://github.com/node-red/node-red/pull/5334"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/5063"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4902"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4806"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4670"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/pull/2336"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/1839"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/351"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/188"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:nb5053a2d10604b9f",
+      "https://schema.org/seeAlso": [
+        {
+          "@id": "https://github.com/node-red/node-red/issues/5436"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/5384"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/5344"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/5005"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/pull/5003"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/pull/4770"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/pull/4757"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4723"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4541"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4494"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4106"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/pull/3984"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/3937"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/3490"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/pull/2529"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/2040"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/1702"
+        },
+        {
+          "@id": "https://discourse.nodered.org/t/function-nodes-how-to-reuse-js-functions-in-my-functions/100202"
+        }
+      ],
+      "https://schema.org/comment": [
+        {
+          "@value": "This element is part of a loop."
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:n1e106aca59b53bab",
+      "https://schema.org/seeAlso": [
+        {
+          "@id": "https://github.com/node-red/node-red/issues/5347"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/5116"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/5063"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4110"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4044"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/3940"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/3757"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/2700"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/2695"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/pull/1655"
+        },
+        {
+          "@id": "https://discourse.nodered.org/t/using-home-assistants-input-number-in-a-change-node-to-send-data-to-hourglass-node/100227"
+        },
+        {
+          "@id": "https://discourse.nodered.org/t/dashboard-2-0-ui-chart-prevent-line-color-changes-for-certain-data/100214"
+        }
+      ],
+      "https://schema.org/comment": [
+        {
+          "@value": "This element is part of a loop."
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:n023b526ff4cdef8c",
+      "https://schema.org/seeAlso": [
+        {
+          "@id": "https://github.com/node-red/node-red/issues/5124"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/5048"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4902"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4542"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/3936"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/3436"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/3425"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/pull/3402"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/pull/3396"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/2643"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/1164"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/978"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/81"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:nd43534c34a4a54ce",
+      "https://schema.org/seeAlso": [
+        {
+          "@id": "https://github.com/node-red/node-red/pull/5334"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/5063"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4902"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4806"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4670"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/pull/2336"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/1839"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/351"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/188"
+        }
+      ],
+      "https://schema.org/sameAs": [
+        {
+          "@id": "urn:nrua:n773192bab4698d7c"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:n773192bab4698d7c",
+      "https://schema.org/seeAlso": [
+        {
+          "@id": "https://github.com/node-red/node-red/issues/5124"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/5048"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4902"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/4542"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/3936"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/3436"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/3425"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/pull/3402"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/pull/3396"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/2643"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/1164"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/978"
+        },
+        {
+          "@id": "https://github.com/node-red/node-red/issues/81"
+        }
+      ],
+      "https://schema.org/sameAs": [
+        {
+          "@id": "urn:nrua:nd43534c34a4a54ce"
+        }
+      ]
+    },
+    {
+      "@id": "urn:nrua:f5887eb05077a5c03",
+      "https://schema.org/seeAlso": [
+        {
+          "@id": "urn:libflow:535331d8.55c1f"
+        }
+      ]
+    }
+  ]
+}
