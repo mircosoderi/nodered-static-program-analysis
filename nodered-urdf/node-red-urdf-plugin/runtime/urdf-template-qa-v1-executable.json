@@ -1,0 +1,1520 @@
+{
+  "catalogId": "urdf-template-qa-v1",
+  "catalogVersion": "1.1.0",
+  "title": "uRDF deterministic template QA catalogue",
+  "description": "Closed template catalogue for deterministic question answering over Node-RED application, inferred, and imported knowledge graphs.",
+  "runtimeRequestContract": {
+    "requestShape": {
+      "templateId": "string",
+      "parameters": "object"
+    },
+    "templateIdIsPrimaryExecutionKey": true,
+    "freeTextParsingAllowed": false,
+    "templateTextUsage": "display_only_not_for_runtime_matching",
+    "parameterSource": "editor_ui_only",
+    "validationFailureText": {
+      "unknownTemplateId": "Invalid request: unknown templateId \"{templateId}\".",
+      "missingParameter": "Invalid request: parameter \"{parameterName}\" is required for templateId \"{templateId}\".",
+      "invalidEnumValue": "Invalid request: parameter \"{parameterName}\" must be one of: {allowedValues}.",
+      "emptyString": "Invalid request: parameter \"{parameterName}\" must be a non-empty string.",
+      "wrongType": "Invalid request: parameter \"{parameterName}\" must be a string.",
+      "unexpectedParameter": "Invalid request: parameter \"{parameterName}\" is not allowed for templateId \"{templateId}\"."
+    }
+  },
+  "runtimeResponseContract": {
+    "responseType": "plain_text",
+    "structuredPayloadAllowed": false,
+    "lineBreak": "\n",
+    "sectionSeparator": "\n\n"
+  },
+  "graphRegistry": {
+    "application": "urn:nrua:app",
+    "inferred": "urn:graph:inferred",
+    "ontology": "urn:nrua:ontology",
+    "rules": "urn:nrua:rules",
+    "environment": "urn:nrua:env",
+    "importedIssues": "urn:graph:issues",
+    "importedForum": "urn:graph:forum",
+    "importedCommunityFlows": "urn:graph:flowslib"
+  },
+  "namespaceRegistry": {
+    "rdf:type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+    "schema:name": "https://schema.org/name",
+    "schema:title": "https://schema.org/title",
+    "schema:identifier": "https://schema.org/identifier",
+    "schema:description": "https://schema.org/description",
+    "schema:date": "https://schema.org/date",
+    "schema:url": "https://schema.org/url",
+    "schema:keywords": "https://schema.org/keywords",
+    "schema:comment": "https://schema.org/comment",
+    "schema:seeAlso": "https://schema.org/seeAlso",
+    "schema:sameAs": "https://schema.org/sameAs",
+    "nrua:Flow": "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Flow",
+    "nrua:Node": "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node",
+    "nrua:NodeOutput": "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#NodeOutput",
+    "nrua:type": "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#type",
+    "nrua:isPartOfFlow": "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfFlow",
+    "nrua:hasOutput": "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#hasOutput",
+    "nrua:fromGate": "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#fromGate",
+    "nrua:toNode": "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#toNode",
+    "schema:DigitalDocument": "https://schema.org/DigitalDocument",
+    "schema:SoftwareSourceCode": "https://schema.org/SoftwareSourceCode"
+  },
+  "sourceCatalog": {
+    "issues": {
+      "graphId": "urn:graph:issues",
+      "entityClass": "https://schema.org/DigitalDocument",
+      "entityLabelSingular": "issue",
+      "entityLabelPlural": "issues",
+      "titlePredicate": "https://schema.org/title",
+      "urlPredicate": "https://schema.org/url",
+      "datePredicate": "https://schema.org/date",
+      "classificationPolicy": "treat_all_documents_as_issues_in_v1",
+      "notes": [
+        "The sample GitHub import graph contains issue and pull-request URLs, but the provided project files do not expose a clean RDF-level split between issues and pull requests.",
+        "V1 therefore treats every https://schema.org/DigitalDocument in urn:graph:issues as an imported issue record."
+      ]
+    },
+    "forum": {
+      "graphId": "urn:graph:forum",
+      "entityClass": "https://schema.org/DigitalDocument",
+      "entityLabelSingular": "forum post",
+      "entityLabelPlural": "forum posts",
+      "titlePredicate": "https://schema.org/title",
+      "urlPredicate": "https://schema.org/url",
+      "datePredicate": "https://schema.org/date"
+    },
+    "communityFlows": {
+      "graphId": "urn:graph:flowslib",
+      "entityClass": "https://schema.org/SoftwareSourceCode",
+      "entityLabelSingular": "community flow",
+      "entityLabelPlural": "community flows",
+      "titlePredicate": "https://schema.org/title",
+      "urlPredicate": "https://schema.org/url",
+      "identifierPredicate": "https://schema.org/identifier",
+      "keywordsPredicate": "https://schema.org/keywords"
+    }
+  },
+  "matchingPolicies": {
+    "namedEntityResolution": {
+      "field": "https://schema.org/name",
+      "mode": "exact",
+      "normalization": {
+        "trimWhitespace": true,
+        "caseSensitive": false,
+        "collapseInternalWhitespace": false
+      },
+      "allowMultipleMatches": true,
+      "notFoundBehavior": "return_text_not_found"
+    },
+    "topicLookup": {
+      "field": "https://schema.org/title",
+      "mode": "substring",
+      "normalization": {
+        "trimWhitespace": true,
+        "caseSensitive": false,
+        "collapseInternalWhitespace": false
+      },
+      "allowMultipleMatches": true,
+      "notFoundBehavior": "return_text_not_found"
+    },
+    "importedKnowledgeJoin": {
+      "fromGraph": "urn:graph:inferred",
+      "predicate": "https://schema.org/seeAlso",
+      "joinKey": "target_iri_equals_imported_entity_id",
+      "targetMustExistInSourceGraph": true,
+      "deduplicateBy": "@id"
+    }
+  },
+  "entityDisplayPolicies": {
+    "node": {
+      "entityClass": "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node",
+      "displayNameField": "https://schema.org/name",
+      "identifierField": "https://schema.org/identifier",
+      "nodeTypeField": "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#type",
+      "flowLinkField": "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#isPartOfFlow",
+      "displayLabelPriority": [
+        "schema:name",
+        "schema:identifier",
+        "nrua:type",
+        "@id"
+      ],
+      "fallbackDisplayFormat": "{nodeType} [{identifier}]"
+    },
+    "flow": {
+      "entityClass": "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Flow",
+      "displayNameField": "https://schema.org/name",
+      "identifierField": "https://schema.org/identifier",
+      "keywordsField": "https://schema.org/keywords",
+      "displayLabelPriority": [
+        "schema:name",
+        "schema:identifier",
+        "@id"
+      ],
+      "fallbackDisplayFormat": "flow [{identifier}]"
+    }
+  },
+  "textAnswerContracts": {
+    "flagged_entity_list": {
+      "style": "plain_text_with_single_heading_and_dash_bullets",
+      "multipleSubjectsHandling": "single_flat_list",
+      "itemBullet": "- ",
+      "emptyBullet": "- None.",
+      "headingsByTemplate": {
+        "warning.list_flagged_nodes": "Flagged nodes:",
+        "warning.list_flagged_flows": "Flagged flows:",
+        "matching.list_application_flows_with_community_matches": "Application flows matched to imported community flows:",
+        "topic.list_forum_posts_by_topic": "Forum posts related to \"{topic}\":",
+        "topic.list_issues_by_topic": "Issues related to \"{topic}\":",
+        "topic.list_community_flows_by_topic": "Imported community flows related to \"{topic}\":"
+      },
+      "itemFormats": {
+        "node": "- {displayLabel} | id: {identifierOrDash} | type: {nodeTypeOrDash} | flow: {flowNameOrDash}",
+        "flow": "- {displayLabel} | id: {identifierOrDash}",
+        "issue": "- {title} | url: {urlOrDash}",
+        "forum_post": "- {title} | url: {urlOrDash}",
+        "community_flow": "- {title} | id: {identifierOrDash} | url: {urlOrDash}"
+      },
+      "emptyTextsByTemplate": {
+        "warning.list_flagged_nodes": "Flagged nodes:\n- None.",
+        "warning.list_flagged_flows": "Flagged flows:\n- None.",
+        "matching.list_application_flows_with_community_matches": "Application flows matched to imported community flows:\n- None.",
+        "topic.list_forum_posts_by_topic": "Forum posts related to \"{topic}\":\n- None.",
+        "topic.list_issues_by_topic": "Issues related to \"{topic}\":\n- None.",
+        "topic.list_community_flows_by_topic": "Imported community flows related to \"{topic}\":\n- None."
+      }
+    },
+    "flagged_entity_explanation": {
+      "style": "plain_text_with_repeated_subject_blocks",
+      "subjectBlockSeparator": "\n\n",
+      "itemBullet": "- ",
+      "subjectHeadingsByTemplate": {
+        "warning.explain_flagged_node_by_name": "Node {displayLabel} is flagged because:",
+        "warning.explain_flagged_flow_by_name": "Flow {displayLabel} is flagged because:"
+      },
+      "sections": [
+        {
+          "heading": null,
+          "bulletListSource": "warningComments",
+          "emptyBullet": "- No warning comment was found in the inferred graph."
+        },
+        {
+          "heading": "Related imported knowledge counts:",
+          "fixedLines": [
+            "- Issues: {relatedIssueCount}",
+            "- Forum posts: {relatedForumCount}",
+            "- Community flows: {relatedCommunityFlowCount}"
+          ]
+        }
+      ],
+      "notFoundTextsByTemplate": {
+        "warning.explain_flagged_node_by_name": "No node named \"{entity_name}\" was found.",
+        "warning.explain_flagged_flow_by_name": "No flow named \"{entity_name}\" was found."
+      }
+    },
+    "entity_detail": {
+      "style": "plain_text_with_repeated_subject_blocks_and_named_sections",
+      "subjectBlockSeparator": "\n\n",
+      "sectionSeparator": "\n",
+      "itemBullet": "- ",
+      "subjectHeadingsByTemplate": {
+        "inspect.tell_me_about_node_by_name": "Node {displayLabel}",
+        "inspect.tell_me_about_flow_by_name": "Flow {displayLabel}"
+      },
+      "sectionsByEntityKind": {
+        "node": [
+          {
+            "heading": "Basic information:",
+            "fixedLines": [
+              "- Name: {displayLabel}",
+              "- Identifier: {identifierOrDash}",
+              "- Type: {nodeTypeOrDash}",
+              "- Flow: {flowNameOrDash}"
+            ]
+          },
+          {
+            "heading": "Warnings:",
+            "bulletListSource": "warningComments",
+            "emptyBullet": "- None."
+          },
+          {
+            "heading": "Same-as matches:",
+            "bulletListSource": "sameAsDisplayValues",
+            "emptyBullet": "- None."
+          },
+          {
+            "heading": "Related knowledge counts:",
+            "fixedLines": [
+              "- Issues: {relatedIssueCount}",
+              "- Forum posts: {relatedForumCount}",
+              "- Community flows: {relatedCommunityFlowCount}"
+            ]
+          }
+        ],
+        "flow": [
+          {
+            "heading": "Basic information:",
+            "fixedLines": [
+              "- Name: {displayLabel}",
+              "- Identifier: {identifierOrDash}",
+              "- Keywords: {keywordsOrDash}"
+            ]
+          },
+          {
+            "heading": "Warnings:",
+            "bulletListSource": "warningComments",
+            "emptyBullet": "- None."
+          },
+          {
+            "heading": "Same-as matches:",
+            "bulletListSource": "sameAsDisplayValues",
+            "emptyBullet": "- None."
+          },
+          {
+            "heading": "Related knowledge counts:",
+            "fixedLines": [
+              "- Issues: {relatedIssueCount}",
+              "- Forum posts: {relatedForumCount}",
+              "- Community flows: {relatedCommunityFlowCount}"
+            ]
+          }
+        ]
+      },
+      "notFoundTextsByTemplate": {
+        "inspect.tell_me_about_node_by_name": "No node named \"{entity_name}\" was found.",
+        "inspect.tell_me_about_flow_by_name": "No flow named \"{entity_name}\" was found."
+      }
+    },
+    "related_knowledge": {
+      "style": "plain_text_with_repeated_subject_blocks_and_source_sections",
+      "subjectBlockSeparator": "\n\n",
+      "sectionSeparator": "\n",
+      "itemBullet": "- ",
+      "subjectHeadingsByTemplate": {
+        "related.list_issues_for_node_by_name": "Issues related to node {displayLabel}:",
+        "related.list_forum_posts_for_node_by_name": "Forum posts related to node {displayLabel}:",
+        "related.list_issues_for_flow_by_name": "Issues related to flow {displayLabel}:",
+        "related.list_forum_posts_for_flow_by_name": "Forum posts related to flow {displayLabel}:",
+        "related.show_imported_knowledge_for_node_by_name": "Imported knowledge related to node {displayLabel}:",
+        "related.show_imported_knowledge_for_flow_by_name": "Imported knowledge related to flow {displayLabel}:",
+        "matching.show_community_flow_matches_for_flow_by_name": "Imported community flows matched to flow {displayLabel}:"
+      },
+      "sectionHeadings": {
+        "issues": "Issues:",
+        "forum": "Forum posts:",
+        "communityFlows": "Community flows:"
+      },
+      "itemFormats": {
+        "issues": "- {title} | url: {urlOrDash}",
+        "forum": "- {title} | url: {urlOrDash}",
+        "communityFlows": "- {title} | id: {identifierOrDash} | url: {urlOrDash}"
+      },
+      "emptySectionTexts": {
+        "issues": "- None.",
+        "forum": "- None.",
+        "communityFlows": "- None."
+      },
+      "notFoundTextsByTemplate": {
+        "related.list_issues_for_node_by_name": "No node named \"{entity_name}\" was found.",
+        "related.list_forum_posts_for_node_by_name": "No node named \"{entity_name}\" was found.",
+        "related.list_issues_for_flow_by_name": "No flow named \"{entity_name}\" was found.",
+        "related.list_forum_posts_for_flow_by_name": "No flow named \"{entity_name}\" was found.",
+        "related.show_imported_knowledge_for_node_by_name": "No node named \"{entity_name}\" was found.",
+        "related.show_imported_knowledge_for_flow_by_name": "No flow named \"{entity_name}\" was found.",
+        "matching.show_community_flow_matches_for_flow_by_name": "No flow named \"{flow_name}\" was found."
+      }
+    },
+    "count": {
+      "style": "single_line_plain_text",
+      "lineFormatsByTemplate": {
+        "inventory.count_imported_issues": "Imported issues count: {count}",
+        "inventory.count_imported_forum_posts": "Imported forum posts count: {count}",
+        "inventory.count_imported_community_flows": "Imported community flows count: {count}"
+      }
+    }
+  },
+  "executionStrategyRegistry": {
+    "list_flagged_entities_by_kind": {
+      "requiredInputs": {
+        "parameters": [
+          {
+            "name": "entity_kind",
+            "type": "enum",
+            "allowedValues": [
+              "node",
+              "flow"
+            ]
+          }
+        ],
+        "graphs": [
+          "application",
+          "inferred"
+        ]
+      },
+      "entitySelection": {
+        "applicationEntityClassByEntityKind": {
+          "node": "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node",
+          "flow": "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Flow"
+        },
+        "flagPredicate": "https://schema.org/comment",
+        "flagCondition": "an application entity is flagged if the inferred graph contains at least one literal schema:comment triple whose subject IRI equals the entity @id"
+      },
+      "intermediateRecordShape": {
+        "subjectId": "application entity @id",
+        "displayLabel": "resolved with entityDisplayPolicies",
+        "identifier": "schema:identifier literal or '-'",
+        "nodeType": "nrua:type literal or '-' for nodes",
+        "flowName": "linked flow schema:name literal or '-' for nodes"
+      },
+      "sortOrder": [
+        "displayLabel lowercase ascending",
+        "identifier lowercase ascending",
+        "subjectId ascending"
+      ],
+      "textMapping": {
+        "answerType": "flagged_entity_list",
+        "multipleResults": "render one heading followed by one bullet per intermediate record",
+        "zeroResults": "render the template-specific empty text"
+      }
+    },
+    "explain_flagged_entity_by_name": {
+      "requiredInputs": {
+        "parameters": [
+          {
+            "name": "entity_kind",
+            "type": "enum",
+            "allowedValues": [
+              "node",
+              "flow"
+            ]
+          },
+          {
+            "name": "entity_name",
+            "type": "string",
+            "minLengthAfterTrim": 1
+          }
+        ],
+        "graphs": [
+          "application",
+          "inferred",
+          "importedIssues",
+          "importedForum",
+          "importedCommunityFlows"
+        ]
+      },
+      "matching": {
+        "sourceGraph": "application",
+        "field": "https://schema.org/name",
+        "mode": "exact_case_insensitive_after_trim",
+        "multipleMatches": "allowed",
+        "candidateClassByEntityKind": {
+          "node": "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node",
+          "flow": "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Flow"
+        }
+      },
+      "reasonCollection": {
+        "warningPredicate": "https://schema.org/comment",
+        "rule": "collect all literal schema:comment values from inferred graph for each matched entity subject; deduplicate exact strings; sort case-insensitively ascending"
+      },
+      "relatedKnowledgeCounts": {
+        "joinPredicate": "https://schema.org/seeAlso",
+        "joinRule": "for each matched entity subject, collect inferred schema:seeAlso target IRIs, then count unique targets that exist as @id in each imported source graph"
+      },
+      "textMapping": {
+        "answerType": "flagged_entity_explanation",
+        "perMatch": "render one subject block for each matched entity in sorted order",
+        "subjectSortOrder": [
+          "displayLabel lowercase ascending",
+          "identifier lowercase ascending",
+          "subjectId ascending"
+        ],
+        "notFound": "render the template-specific not-found text"
+      }
+    },
+    "describe_entity_by_name": {
+      "requiredInputs": {
+        "parameters": [
+          {
+            "name": "entity_kind",
+            "type": "enum",
+            "allowedValues": [
+              "node",
+              "flow"
+            ]
+          },
+          {
+            "name": "entity_name",
+            "type": "string",
+            "minLengthAfterTrim": 1
+          }
+        ],
+        "graphs": [
+          "application",
+          "inferred",
+          "importedIssues",
+          "importedForum",
+          "importedCommunityFlows"
+        ]
+      },
+      "matching": {
+        "sourceGraph": "application",
+        "field": "https://schema.org/name",
+        "mode": "exact_case_insensitive_after_trim",
+        "multipleMatches": "allowed",
+        "candidateClassByEntityKind": {
+          "node": "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node",
+          "flow": "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Flow"
+        }
+      },
+      "detailCollection": {
+        "commonFields": [
+          "schema:identifier",
+          "schema:name",
+          "schema:comment from inferred graph",
+          "schema:sameAs from inferred graph",
+          "schema:seeAlso from inferred graph"
+        ],
+        "nodeOnlyFields": [
+          "nrua:type",
+          "nrua:isPartOfFlow followed by linked flow schema:name"
+        ],
+        "flowOnlyFields": [
+          "schema:keywords"
+        ],
+        "sameAsDisplayRule": "for each inferred schema:sameAs target IRI, render the linked entity display label when the target exists in the application graph; otherwise render the target IRI"
+      },
+      "relatedKnowledgeCounts": {
+        "joinPredicate": "https://schema.org/seeAlso",
+        "joinRule": "for each matched entity subject, collect inferred schema:seeAlso target IRIs, then count unique targets that exist as @id in each imported source graph"
+      },
+      "textMapping": {
+        "answerType": "entity_detail",
+        "perMatch": "render one subject block per matched entity using the section set for the entity kind",
+        "subjectSortOrder": [
+          "displayLabel lowercase ascending",
+          "identifier lowercase ascending",
+          "subjectId ascending"
+        ],
+        "warningSortOrder": [
+          "text lowercase ascending"
+        ],
+        "sameAsSortOrder": [
+          "display lowercase ascending"
+        ],
+        "notFound": "render the template-specific not-found text"
+      }
+    },
+    "list_related_imported_knowledge_for_entity_by_name": {
+      "requiredInputs": {
+        "parameters": [
+          {
+            "name": "entity_kind",
+            "type": "enum",
+            "allowedValues": [
+              "node",
+              "flow"
+            ]
+          },
+          {
+            "name": "entity_name",
+            "type": "string",
+            "minLengthAfterTrim": 1
+          }
+        ],
+        "fixedTemplateArguments": [
+          {
+            "name": "includedSources",
+            "type": "string_array",
+            "allowedValues": [
+              "issues",
+              "forum",
+              "communityFlows"
+            ]
+          }
+        ],
+        "graphs": [
+          "application",
+          "inferred",
+          "importedIssues",
+          "importedForum",
+          "importedCommunityFlows"
+        ]
+      },
+      "matching": {
+        "sourceGraph": "application",
+        "field": "https://schema.org/name",
+        "mode": "exact_case_insensitive_after_trim",
+        "multipleMatches": "allowed",
+        "candidateClassByEntityKind": {
+          "node": "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Node",
+          "flow": "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Flow"
+        }
+      },
+      "joinAndFilter": {
+        "joinPredicate": "https://schema.org/seeAlso",
+        "joinRule": "for each matched entity subject, collect inferred schema:seeAlso target IRIs, keep only targets whose @id exists in one of the included source graphs, deduplicate by target @id within each source"
+      },
+      "importedRecordFields": {
+        "issues": [
+          "schema:title",
+          "schema:url",
+          "schema:date"
+        ],
+        "forum": [
+          "schema:title",
+          "schema:url",
+          "schema:date"
+        ],
+        "communityFlows": [
+          "schema:title",
+          "schema:url",
+          "schema:identifier",
+          "schema:keywords"
+        ]
+      },
+      "sortOrder": {
+        "subjects": [
+          "displayLabel lowercase ascending",
+          "identifier lowercase ascending",
+          "subjectId ascending"
+        ],
+        "importedItemsWithinEachSource": [
+          "title lowercase ascending",
+          "@id ascending"
+        ]
+      },
+      "textMapping": {
+        "answerType": "related_knowledge",
+        "perMatch": "render one subject block per matched entity; for each included source render the configured section heading followed by bullets or '- None.'",
+        "notFound": "render the template-specific not-found text"
+      }
+    },
+    "list_application_flows_with_community_matches": {
+      "requiredInputs": {
+        "parameters": [],
+        "graphs": [
+          "application",
+          "inferred",
+          "importedCommunityFlows"
+        ]
+      },
+      "selection": {
+        "candidateClass": "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Flow",
+        "matchRule": "an application flow is included if the inferred graph contains at least one schema:seeAlso target IRI for that flow and that target exists as @id in the communityFlows source graph"
+      },
+      "intermediateRecordShape": {
+        "subjectId": "flow @id",
+        "displayLabel": "resolved with entityDisplayPolicies.flow",
+        "identifier": "schema:identifier literal or '-'"
+      },
+      "sortOrder": [
+        "displayLabel lowercase ascending",
+        "identifier lowercase ascending",
+        "subjectId ascending"
+      ],
+      "textMapping": {
+        "answerType": "flagged_entity_list",
+        "zeroResults": "render the template-specific empty text"
+      }
+    },
+    "show_community_flow_matches_for_flow_by_name": {
+      "requiredInputs": {
+        "parameters": [
+          {
+            "name": "flow_name",
+            "type": "string",
+            "minLengthAfterTrim": 1
+          }
+        ],
+        "graphs": [
+          "application",
+          "inferred",
+          "importedCommunityFlows"
+        ]
+      },
+      "matching": {
+        "sourceGraph": "application",
+        "field": "https://schema.org/name",
+        "mode": "exact_case_insensitive_after_trim",
+        "multipleMatches": "allowed",
+        "candidateClass": "https://w3id.org/nodered-ontology-based-program-analysis/nodered-user-application-ontology#Flow"
+      },
+      "joinAndFilter": {
+        "joinPredicate": "https://schema.org/seeAlso",
+        "joinRule": "for each matched flow subject, collect inferred schema:seeAlso target IRIs, keep only targets whose @id exists in the communityFlows source graph, deduplicate by target @id"
+      },
+      "importedRecordFields": {
+        "communityFlows": [
+          "schema:title",
+          "schema:url",
+          "schema:identifier",
+          "schema:keywords"
+        ]
+      },
+      "sortOrder": {
+        "subjects": [
+          "displayLabel lowercase ascending",
+          "identifier lowercase ascending",
+          "subjectId ascending"
+        ],
+        "importedItemsWithinEachSource": [
+          "title lowercase ascending",
+          "@id ascending"
+        ]
+      },
+      "textMapping": {
+        "answerType": "related_knowledge",
+        "perMatch": "render one subject block per matched flow with only the Community flows section",
+        "notFound": "render the template-specific not-found text"
+      }
+    },
+    "count_imported_source_entities": {
+      "requiredInputs": {
+        "parameters": [
+          {
+            "name": "source_kind",
+            "type": "enum",
+            "allowedValues": [
+              "issues",
+              "forum",
+              "communityFlows"
+            ]
+          }
+        ],
+        "graphs": [
+          "importedIssues",
+          "importedForum",
+          "importedCommunityFlows"
+        ]
+      },
+      "countRule": {
+        "issues": "count graph nodes in urn:graph:issues whose rdf:type includes https://schema.org/DigitalDocument",
+        "forum": "count graph nodes in urn:graph:forum whose rdf:type includes https://schema.org/DigitalDocument",
+        "communityFlows": "count graph nodes in urn:graph:flowslib whose rdf:type includes https://schema.org/SoftwareSourceCode"
+      },
+      "textMapping": {
+        "answerType": "count",
+        "oneLineOnly": true
+      }
+    },
+    "topic_lookup_imported_knowledge": {
+      "requiredInputs": {
+        "parameters": [
+          {
+            "name": "source_kind",
+            "type": "enum",
+            "allowedValues": [
+              "issues",
+              "forum",
+              "communityFlows"
+            ]
+          },
+          {
+            "name": "topic",
+            "type": "string",
+            "minLengthAfterTrim": 1
+          }
+        ],
+        "graphs": [
+          "importedIssues",
+          "importedForum",
+          "importedCommunityFlows"
+        ]
+      },
+      "matching": {
+        "fieldBySource": {
+          "issues": "https://schema.org/title",
+          "forum": "https://schema.org/title",
+          "communityFlows": "https://schema.org/title"
+        },
+        "mode": "substring_case_insensitive_after_trim",
+        "multipleMatches": "allowed",
+        "candidateClassBySource": {
+          "issues": "https://schema.org/DigitalDocument",
+          "forum": "https://schema.org/DigitalDocument",
+          "communityFlows": "https://schema.org/SoftwareSourceCode"
+        }
+      },
+      "recordFields": {
+        "issues": [
+          "schema:title",
+          "schema:url",
+          "schema:date"
+        ],
+        "forum": [
+          "schema:title",
+          "schema:url",
+          "schema:date"
+        ],
+        "communityFlows": [
+          "schema:title",
+          "schema:url",
+          "schema:identifier",
+          "schema:keywords"
+        ]
+      },
+      "sortOrder": [
+        "title lowercase ascending",
+        "@id ascending"
+      ],
+      "textMapping": {
+        "answerType": "flagged_entity_list",
+        "multipleResults": "render one heading followed by one bullet per matching imported record",
+        "zeroResults": "render the template-specific empty text"
+      }
+    }
+  },
+  "intentRegistry": [
+    {
+      "intentId": "warning.listFlaggedEntities",
+      "purpose": "List nodes or flows that have at least one inferred warning comment.",
+      "requiredParameters": [
+        "entity_kind"
+      ],
+      "outputType": "flagged_entity_list",
+      "templates": [
+        "warning.list_flagged_nodes",
+        "warning.list_flagged_flows"
+      ]
+    },
+    {
+      "intentId": "warning.explainFlaggedEntityByName",
+      "purpose": "Explain why a named node or flow is flagged, using inferred warning comments and related imported knowledge counts.",
+      "requiredParameters": [
+        "entity_kind",
+        "entity_name"
+      ],
+      "outputType": "flagged_entity_explanation",
+      "templates": [
+        "warning.explain_flagged_node_by_name",
+        "warning.explain_flagged_flow_by_name"
+      ]
+    },
+    {
+      "intentId": "inspect.describeEntityByName",
+      "purpose": "Tell the user about a named node or flow using application facts, inferred warnings, same-as links, and related imported knowledge counts.",
+      "requiredParameters": [
+        "entity_kind",
+        "entity_name"
+      ],
+      "outputType": "entity_detail",
+      "templates": [
+        "inspect.tell_me_about_node_by_name",
+        "inspect.tell_me_about_flow_by_name"
+      ]
+    },
+    {
+      "intentId": "related.listImportedDocumentsForEntityByName",
+      "purpose": "List imported issues or forum posts linked to a named node or flow through inferred schema:seeAlso relations.",
+      "requiredParameters": [
+        "entity_kind",
+        "entity_name"
+      ],
+      "outputType": "related_knowledge",
+      "templates": [
+        "related.list_issues_for_node_by_name",
+        "related.list_forum_posts_for_node_by_name",
+        "related.list_issues_for_flow_by_name",
+        "related.list_forum_posts_for_flow_by_name"
+      ]
+    },
+    {
+      "intentId": "related.showImportedKnowledgeForEntityByName",
+      "purpose": "Show all imported knowledge linked to a named node or flow, grouped by issues, forum posts, and community flows.",
+      "requiredParameters": [
+        "entity_kind",
+        "entity_name"
+      ],
+      "outputType": "related_knowledge",
+      "templates": [
+        "related.show_imported_knowledge_for_node_by_name",
+        "related.show_imported_knowledge_for_flow_by_name"
+      ]
+    },
+    {
+      "intentId": "matching.listApplicationFlowsWithCommunityMatches",
+      "purpose": "List application flows that have inferred matches to imported community flows.",
+      "requiredParameters": [],
+      "outputType": "flagged_entity_list",
+      "templates": [
+        "matching.list_application_flows_with_community_matches"
+      ]
+    },
+    {
+      "intentId": "matching.showCommunityFlowMatchesForFlowByName",
+      "purpose": "Show imported community flows matched to a named application flow.",
+      "requiredParameters": [
+        "flow_name"
+      ],
+      "outputType": "related_knowledge",
+      "templates": [
+        "matching.show_community_flow_matches_for_flow_by_name"
+      ]
+    },
+    {
+      "intentId": "inventory.countImportedKnowledge",
+      "purpose": "Count imported issues, forum posts, or community flows inside their source graph.",
+      "requiredParameters": [
+        "source_kind"
+      ],
+      "outputType": "count",
+      "templates": [
+        "inventory.count_imported_issues",
+        "inventory.count_imported_forum_posts",
+        "inventory.count_imported_community_flows"
+      ]
+    },
+    {
+      "intentId": "topic.listImportedKnowledgeByTitleSubstring",
+      "purpose": "List imported issues, forum posts, or community flows whose schema:title contains the given topic substring, case-insensitively.",
+      "requiredParameters": [
+        "source_kind",
+        "topic"
+      ],
+      "outputType": "flagged_entity_list",
+      "templates": [
+        "topic.list_forum_posts_by_topic",
+        "topic.list_issues_by_topic",
+        "topic.list_community_flows_by_topic"
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "templateId": "warning.list_flagged_nodes",
+      "userVisibleLabel": "List flagged nodes",
+      "canonicalTemplateText": "list flagged nodes",
+      "intentId": "warning.listFlaggedEntities",
+      "answerType": "flagged_entity_list",
+      "parameterDefinitions": [],
+      "execution": {
+        "strategyId": "list_flagged_entities_by_kind",
+        "fixedArguments": {
+          "entity_kind": "node"
+        },
+        "graphHints": [
+          "application",
+          "inferred"
+        ],
+        "sourceFilters": []
+      }
+    },
+    {
+      "templateId": "warning.list_flagged_flows",
+      "userVisibleLabel": "List flagged flows",
+      "canonicalTemplateText": "list flagged flows",
+      "intentId": "warning.listFlaggedEntities",
+      "answerType": "flagged_entity_list",
+      "parameterDefinitions": [],
+      "execution": {
+        "strategyId": "list_flagged_entities_by_kind",
+        "fixedArguments": {
+          "entity_kind": "flow"
+        },
+        "graphHints": [
+          "application",
+          "inferred"
+        ],
+        "sourceFilters": []
+      }
+    },
+    {
+      "templateId": "warning.explain_flagged_node_by_name",
+      "userVisibleLabel": "Explain why a node is flagged",
+      "canonicalTemplateText": "explain why a node named \"{entity_name}\" is flagged",
+      "intentId": "warning.explainFlaggedEntityByName",
+      "answerType": "flagged_entity_explanation",
+      "parameterDefinitions": [
+        {
+          "name": "entity_name",
+          "type": "string",
+          "required": true,
+          "trimWhitespace": true,
+          "minLength": 1,
+          "semanticType": "node_name",
+          "editorControl": "application_node_name_picker",
+          "matchField": "https://schema.org/name",
+          "matchMode": "exact_case_insensitive"
+        }
+      ],
+      "execution": {
+        "strategyId": "explain_flagged_entity_by_name",
+        "fixedArguments": {
+          "entity_kind": "node"
+        },
+        "graphHints": [
+          "application",
+          "inferred",
+          "importedIssues",
+          "importedForum",
+          "importedCommunityFlows"
+        ],
+        "sourceFilters": [
+          "issues",
+          "forum",
+          "communityFlows"
+        ]
+      }
+    },
+    {
+      "templateId": "warning.explain_flagged_flow_by_name",
+      "userVisibleLabel": "Explain why a flow is flagged",
+      "canonicalTemplateText": "explain why a flow named \"{entity_name}\" is flagged",
+      "intentId": "warning.explainFlaggedEntityByName",
+      "answerType": "flagged_entity_explanation",
+      "parameterDefinitions": [
+        {
+          "name": "entity_name",
+          "type": "string",
+          "required": true,
+          "trimWhitespace": true,
+          "minLength": 1,
+          "semanticType": "flow_name",
+          "editorControl": "application_flow_name_picker",
+          "matchField": "https://schema.org/name",
+          "matchMode": "exact_case_insensitive"
+        }
+      ],
+      "execution": {
+        "strategyId": "explain_flagged_entity_by_name",
+        "fixedArguments": {
+          "entity_kind": "flow"
+        },
+        "graphHints": [
+          "application",
+          "inferred",
+          "importedIssues",
+          "importedForum",
+          "importedCommunityFlows"
+        ],
+        "sourceFilters": [
+          "issues",
+          "forum",
+          "communityFlows"
+        ]
+      }
+    },
+    {
+      "templateId": "inspect.tell_me_about_node_by_name",
+      "userVisibleLabel": "Tell me about a node",
+      "canonicalTemplateText": "tell me about the node named \"{entity_name}\"",
+      "intentId": "inspect.describeEntityByName",
+      "answerType": "entity_detail",
+      "parameterDefinitions": [
+        {
+          "name": "entity_name",
+          "type": "string",
+          "required": true,
+          "trimWhitespace": true,
+          "minLength": 1,
+          "semanticType": "node_name",
+          "editorControl": "application_node_name_picker",
+          "matchField": "https://schema.org/name",
+          "matchMode": "exact_case_insensitive"
+        }
+      ],
+      "execution": {
+        "strategyId": "describe_entity_by_name",
+        "fixedArguments": {
+          "entity_kind": "node"
+        },
+        "graphHints": [
+          "application",
+          "inferred",
+          "importedIssues",
+          "importedForum",
+          "importedCommunityFlows"
+        ],
+        "sourceFilters": [
+          "issues",
+          "forum",
+          "communityFlows"
+        ]
+      }
+    },
+    {
+      "templateId": "inspect.tell_me_about_flow_by_name",
+      "userVisibleLabel": "Tell me about a flow",
+      "canonicalTemplateText": "tell me about the flow named \"{entity_name}\"",
+      "intentId": "inspect.describeEntityByName",
+      "answerType": "entity_detail",
+      "parameterDefinitions": [
+        {
+          "name": "entity_name",
+          "type": "string",
+          "required": true,
+          "trimWhitespace": true,
+          "minLength": 1,
+          "semanticType": "flow_name",
+          "editorControl": "application_flow_name_picker",
+          "matchField": "https://schema.org/name",
+          "matchMode": "exact_case_insensitive"
+        }
+      ],
+      "execution": {
+        "strategyId": "describe_entity_by_name",
+        "fixedArguments": {
+          "entity_kind": "flow"
+        },
+        "graphHints": [
+          "application",
+          "inferred",
+          "importedIssues",
+          "importedForum",
+          "importedCommunityFlows"
+        ],
+        "sourceFilters": [
+          "issues",
+          "forum",
+          "communityFlows"
+        ]
+      }
+    },
+    {
+      "templateId": "related.list_issues_for_node_by_name",
+      "userVisibleLabel": "List issues related to a node",
+      "canonicalTemplateText": "list issues related to the node named \"{entity_name}\"",
+      "intentId": "related.listImportedDocumentsForEntityByName",
+      "answerType": "related_knowledge",
+      "parameterDefinitions": [
+        {
+          "name": "entity_name",
+          "type": "string",
+          "required": true,
+          "trimWhitespace": true,
+          "minLength": 1,
+          "semanticType": "node_name",
+          "editorControl": "application_node_name_picker",
+          "matchField": "https://schema.org/name",
+          "matchMode": "exact_case_insensitive"
+        }
+      ],
+      "execution": {
+        "strategyId": "list_related_imported_knowledge_for_entity_by_name",
+        "fixedArguments": {
+          "entity_kind": "node",
+          "includedSources": [
+            "issues"
+          ]
+        },
+        "graphHints": [
+          "application",
+          "inferred",
+          "importedIssues"
+        ],
+        "sourceFilters": [
+          "issues"
+        ]
+      }
+    },
+    {
+      "templateId": "related.list_forum_posts_for_node_by_name",
+      "userVisibleLabel": "List forum posts related to a node",
+      "canonicalTemplateText": "list forum posts related to the node named \"{entity_name}\"",
+      "intentId": "related.listImportedDocumentsForEntityByName",
+      "answerType": "related_knowledge",
+      "parameterDefinitions": [
+        {
+          "name": "entity_name",
+          "type": "string",
+          "required": true,
+          "trimWhitespace": true,
+          "minLength": 1,
+          "semanticType": "node_name",
+          "editorControl": "application_node_name_picker",
+          "matchField": "https://schema.org/name",
+          "matchMode": "exact_case_insensitive"
+        }
+      ],
+      "execution": {
+        "strategyId": "list_related_imported_knowledge_for_entity_by_name",
+        "fixedArguments": {
+          "entity_kind": "node",
+          "includedSources": [
+            "forum"
+          ]
+        },
+        "graphHints": [
+          "application",
+          "inferred",
+          "importedForum"
+        ],
+        "sourceFilters": [
+          "forum"
+        ]
+      }
+    },
+    {
+      "templateId": "related.list_issues_for_flow_by_name",
+      "userVisibleLabel": "List issues related to a flow",
+      "canonicalTemplateText": "list issues related to the flow named \"{entity_name}\"",
+      "intentId": "related.listImportedDocumentsForEntityByName",
+      "answerType": "related_knowledge",
+      "parameterDefinitions": [
+        {
+          "name": "entity_name",
+          "type": "string",
+          "required": true,
+          "trimWhitespace": true,
+          "minLength": 1,
+          "semanticType": "flow_name",
+          "editorControl": "application_flow_name_picker",
+          "matchField": "https://schema.org/name",
+          "matchMode": "exact_case_insensitive"
+        }
+      ],
+      "execution": {
+        "strategyId": "list_related_imported_knowledge_for_entity_by_name",
+        "fixedArguments": {
+          "entity_kind": "flow",
+          "includedSources": [
+            "issues"
+          ]
+        },
+        "graphHints": [
+          "application",
+          "inferred",
+          "importedIssues"
+        ],
+        "sourceFilters": [
+          "issues"
+        ]
+      }
+    },
+    {
+      "templateId": "related.list_forum_posts_for_flow_by_name",
+      "userVisibleLabel": "List forum posts related to a flow",
+      "canonicalTemplateText": "list forum posts related to the flow named \"{entity_name}\"",
+      "intentId": "related.listImportedDocumentsForEntityByName",
+      "answerType": "related_knowledge",
+      "parameterDefinitions": [
+        {
+          "name": "entity_name",
+          "type": "string",
+          "required": true,
+          "trimWhitespace": true,
+          "minLength": 1,
+          "semanticType": "flow_name",
+          "editorControl": "application_flow_name_picker",
+          "matchField": "https://schema.org/name",
+          "matchMode": "exact_case_insensitive"
+        }
+      ],
+      "execution": {
+        "strategyId": "list_related_imported_knowledge_for_entity_by_name",
+        "fixedArguments": {
+          "entity_kind": "flow",
+          "includedSources": [
+            "forum"
+          ]
+        },
+        "graphHints": [
+          "application",
+          "inferred",
+          "importedForum"
+        ],
+        "sourceFilters": [
+          "forum"
+        ]
+      }
+    },
+    {
+      "templateId": "related.show_imported_knowledge_for_node_by_name",
+      "userVisibleLabel": "Show imported knowledge for a node",
+      "canonicalTemplateText": "show imported knowledge related to the node named \"{entity_name}\"",
+      "intentId": "related.showImportedKnowledgeForEntityByName",
+      "answerType": "related_knowledge",
+      "parameterDefinitions": [
+        {
+          "name": "entity_name",
+          "type": "string",
+          "required": true,
+          "trimWhitespace": true,
+          "minLength": 1,
+          "semanticType": "node_name",
+          "editorControl": "application_node_name_picker",
+          "matchField": "https://schema.org/name",
+          "matchMode": "exact_case_insensitive"
+        }
+      ],
+      "execution": {
+        "strategyId": "list_related_imported_knowledge_for_entity_by_name",
+        "fixedArguments": {
+          "entity_kind": "node",
+          "includedSources": [
+            "issues",
+            "forum",
+            "communityFlows"
+          ]
+        },
+        "graphHints": [
+          "application",
+          "inferred",
+          "importedIssues",
+          "importedForum",
+          "importedCommunityFlows"
+        ],
+        "sourceFilters": [
+          "issues",
+          "forum",
+          "communityFlows"
+        ]
+      }
+    },
+    {
+      "templateId": "related.show_imported_knowledge_for_flow_by_name",
+      "userVisibleLabel": "Show imported knowledge for a flow",
+      "canonicalTemplateText": "show imported knowledge related to the flow named \"{entity_name}\"",
+      "intentId": "related.showImportedKnowledgeForEntityByName",
+      "answerType": "related_knowledge",
+      "parameterDefinitions": [
+        {
+          "name": "entity_name",
+          "type": "string",
+          "required": true,
+          "trimWhitespace": true,
+          "minLength": 1,
+          "semanticType": "flow_name",
+          "editorControl": "application_flow_name_picker",
+          "matchField": "https://schema.org/name",
+          "matchMode": "exact_case_insensitive"
+        }
+      ],
+      "execution": {
+        "strategyId": "list_related_imported_knowledge_for_entity_by_name",
+        "fixedArguments": {
+          "entity_kind": "flow",
+          "includedSources": [
+            "issues",
+            "forum",
+            "communityFlows"
+          ]
+        },
+        "graphHints": [
+          "application",
+          "inferred",
+          "importedIssues",
+          "importedForum",
+          "importedCommunityFlows"
+        ],
+        "sourceFilters": [
+          "issues",
+          "forum",
+          "communityFlows"
+        ]
+      }
+    },
+    {
+      "templateId": "matching.list_application_flows_with_community_matches",
+      "userVisibleLabel": "List application flows with imported community matches",
+      "canonicalTemplateText": "list flows in the application that match imported community flows",
+      "intentId": "matching.listApplicationFlowsWithCommunityMatches",
+      "answerType": "flagged_entity_list",
+      "parameterDefinitions": [],
+      "execution": {
+        "strategyId": "list_application_flows_with_community_matches",
+        "fixedArguments": {},
+        "graphHints": [
+          "application",
+          "inferred",
+          "importedCommunityFlows"
+        ],
+        "sourceFilters": [
+          "communityFlows"
+        ]
+      }
+    },
+    {
+      "templateId": "matching.show_community_flow_matches_for_flow_by_name",
+      "userVisibleLabel": "Show imported community flows matched to a flow",
+      "canonicalTemplateText": "show imported community flows matched to the flow named \"{flow_name}\"",
+      "intentId": "matching.showCommunityFlowMatchesForFlowByName",
+      "answerType": "related_knowledge",
+      "parameterDefinitions": [
+        {
+          "name": "flow_name",
+          "type": "string",
+          "required": true,
+          "trimWhitespace": true,
+          "minLength": 1,
+          "semanticType": "flow_name",
+          "editorControl": "application_flow_name_picker",
+          "matchField": "https://schema.org/name",
+          "matchMode": "exact_case_insensitive"
+        }
+      ],
+      "execution": {
+        "strategyId": "show_community_flow_matches_for_flow_by_name",
+        "fixedArguments": {
+          "includedSources": [
+            "communityFlows"
+          ]
+        },
+        "graphHints": [
+          "application",
+          "inferred",
+          "importedCommunityFlows"
+        ],
+        "sourceFilters": [
+          "communityFlows"
+        ]
+      }
+    },
+    {
+      "templateId": "inventory.count_imported_issues",
+      "userVisibleLabel": "Count imported issues",
+      "canonicalTemplateText": "count imported issues",
+      "intentId": "inventory.countImportedKnowledge",
+      "answerType": "count",
+      "parameterDefinitions": [],
+      "execution": {
+        "strategyId": "count_imported_source_entities",
+        "fixedArguments": {
+          "source_kind": "issues"
+        },
+        "graphHints": [
+          "importedIssues"
+        ],
+        "sourceFilters": [
+          "issues"
+        ]
+      }
+    },
+    {
+      "templateId": "inventory.count_imported_forum_posts",
+      "userVisibleLabel": "Count imported forum posts",
+      "canonicalTemplateText": "count imported forum posts",
+      "intentId": "inventory.countImportedKnowledge",
+      "answerType": "count",
+      "parameterDefinitions": [],
+      "execution": {
+        "strategyId": "count_imported_source_entities",
+        "fixedArguments": {
+          "source_kind": "forum"
+        },
+        "graphHints": [
+          "importedForum"
+        ],
+        "sourceFilters": [
+          "forum"
+        ]
+      }
+    },
+    {
+      "templateId": "inventory.count_imported_community_flows",
+      "userVisibleLabel": "Count imported community flows",
+      "canonicalTemplateText": "count imported community flows",
+      "intentId": "inventory.countImportedKnowledge",
+      "answerType": "count",
+      "parameterDefinitions": [],
+      "execution": {
+        "strategyId": "count_imported_source_entities",
+        "fixedArguments": {
+          "source_kind": "communityFlows"
+        },
+        "graphHints": [
+          "importedCommunityFlows"
+        ],
+        "sourceFilters": [
+          "communityFlows"
+        ]
+      }
+    },
+    {
+      "templateId": "topic.list_forum_posts_by_topic",
+      "userVisibleLabel": "List forum posts by topic",
+      "canonicalTemplateText": "list forum posts related to \"{topic}\"",
+      "intentId": "topic.listImportedKnowledgeByTitleSubstring",
+      "answerType": "flagged_entity_list",
+      "parameterDefinitions": [
+        {
+          "name": "topic",
+          "type": "string",
+          "required": true,
+          "trimWhitespace": true,
+          "minLength": 1,
+          "semanticType": "topic_substring",
+          "editorControl": "free_text_input",
+          "matchField": "https://schema.org/title",
+          "matchMode": "substring_case_insensitive"
+        }
+      ],
+      "execution": {
+        "strategyId": "topic_lookup_imported_knowledge",
+        "fixedArguments": {
+          "source_kind": "forum"
+        },
+        "graphHints": [
+          "importedForum"
+        ],
+        "sourceFilters": [
+          "forum"
+        ]
+      }
+    },
+    {
+      "templateId": "topic.list_issues_by_topic",
+      "userVisibleLabel": "List issues by topic",
+      "canonicalTemplateText": "list issues related to \"{topic}\"",
+      "intentId": "topic.listImportedKnowledgeByTitleSubstring",
+      "answerType": "flagged_entity_list",
+      "parameterDefinitions": [
+        {
+          "name": "topic",
+          "type": "string",
+          "required": true,
+          "trimWhitespace": true,
+          "minLength": 1,
+          "semanticType": "topic_substring",
+          "editorControl": "free_text_input",
+          "matchField": "https://schema.org/title",
+          "matchMode": "substring_case_insensitive"
+        }
+      ],
+      "execution": {
+        "strategyId": "topic_lookup_imported_knowledge",
+        "fixedArguments": {
+          "source_kind": "issues"
+        },
+        "graphHints": [
+          "importedIssues"
+        ],
+        "sourceFilters": [
+          "issues"
+        ]
+      }
+    },
+    {
+      "templateId": "topic.list_community_flows_by_topic",
+      "userVisibleLabel": "List imported community flows by topic",
+      "canonicalTemplateText": "list imported community flows related to \"{topic}\"",
+      "intentId": "topic.listImportedKnowledgeByTitleSubstring",
+      "answerType": "flagged_entity_list",
+      "parameterDefinitions": [
+        {
+          "name": "topic",
+          "type": "string",
+          "required": true,
+          "trimWhitespace": true,
+          "minLength": 1,
+          "semanticType": "topic_substring",
+          "editorControl": "free_text_input",
+          "matchField": "https://schema.org/title",
+          "matchMode": "substring_case_insensitive"
+        }
+      ],
+      "execution": {
+        "strategyId": "topic_lookup_imported_knowledge",
+        "fixedArguments": {
+          "source_kind": "communityFlows"
+        },
+        "graphHints": [
+          "importedCommunityFlows"
+        ],
+        "sourceFilters": [
+          "communityFlows"
+        ]
+      }
+    }
+  ]
+}

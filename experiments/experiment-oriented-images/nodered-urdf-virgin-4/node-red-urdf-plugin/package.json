@@ -1,0 +1,20 @@
+{
+  "name": "node-red-urdf-plugin",
+  "version": "0.1.0",
+  "description": "Node-RED plugin providing a runtime and editor extension that embeds an RDF store (uRDF) and a rule-based reasoning engine (eyeling), and exposes them through a Node-RED runtime node and an editor sidebar plugin.",
+  "license": "Apache-2.0",
+  "main": "runtime/index.js",
+  "dependencies": {
+    "urdf": "git+https://github.com/mircosoderi/uRDF.js.git#a39cadb9a4bc2c91a91f7c554e518e6dd7b3b836",
+    "eyeling": "git+https://github.com/eyereasoner/eyeling.git#398dbea04ee274ab322c13430e5a14b12cf6f598"
+  },
+  "node-red": {
+    "nodes": {
+      "urdf-runtime": "runtime/index.js"
+    },
+    "plugins": {
+      "urdf-editor": "editor/urdf-sidebar.html"
+    }
+  }
+}
+

@@ -199,6 +199,12 @@ Final experiments showed:
 
 [Link to experiment folder](https://github.com/mircosoderi/nodered-ontology-based-program-analysis/tree/main/experiments/resource-utilization-growing-flows-with-reasoning-2)
 
+## Integration of a lightweight question-answering component
+
+A question answering component co-designed with Chat-GPT 5 was added. The language model is only involved at design-time, and it produces a configuration and resource-aware client-server software that deterministically executes that configuration, without heavy dependencies or AI models involved at execution time. The configuration includes the list of the parametric questions that are supported (the user needs to pick one of those throught the Web interface), the corresponding parametric SPARQL queries, and the templates for the composition of the textual answers to be returned to the user. The client-server software in this case is integrated as extensions of the pre-existing runtime and editor plugins. The outlined approach allowed to balance the power of LLMs with the necessity to keep the overhead. A dedicated experiment demonstrates that after the introduction of this specific question-answering component, the overhead in terms of resource utilizations remains low, perfectly aligned to the resource overhead that was observed before that the question answering component was introduced. 
+
+[link to experiment folder](https://github.com/mircosoderi/nodered-ontology-based-program-analysis/tree/main/experiments/resource-utilization-at-rest-3)
+ 
 ## Conclusion
 
 The experiments demonstrate that **hybrid SPARQL + N3 reasoning can be embedded into the Node-RED runtime in a predictable, scalable, and lightweight manner**, provided that:
